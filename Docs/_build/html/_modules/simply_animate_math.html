@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>simply_animate_math &mdash; Simply Animate Math 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Simply Animate Math 0.1 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Simply Animate Math 0.1 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for simply_animate_math</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/env python</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span> <span class="kn">as</span> <span class="nn">ap</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageColor</span><span class="p">,</span> <span class="n">ImageDraw</span><span class="p">,</span> <span class="n">ImageFont</span>
+
+<span class="kn">import</span> <span class="nn">config</span>
+<span class="kn">import</span> <span class="nn">photos</span>
+<span class="kn">import</span> <span class="nn">template</span>
+
+<div class="viewcode-block" id="SimplyAnimateMath"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath">[docs]</a><span class="k">class</span> <span class="nc">SimplyAnimateMath</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A tool to take photos and make animations.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_mode</span> <span class="o">=</span> <span class="bp">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s">&#39;RGB&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">height</span><span class="p">),</span> <span class="p">(</span><span class="mi">183</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">177</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">photos</span> <span class="o">=</span> <span class="n">photos</span><span class="o">.</span><span class="n">get_photos</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="SimplyAnimateMath.run"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">&quot;Runs all.&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_background</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">draw_equation</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">plane_t</span><span class="o">.</span><span class="n">equation</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">draw_numbers</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">plane_t</span><span class="o">.</span><span class="n">numbers</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">draw_operator</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">plane_t</span><span class="o">.</span><span class="n">operator</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">draw_equal</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">equal</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</div>
+<div class="viewcode-block" id="SimplyAnimateMath.create_background"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.create_background">[docs]</a>    <span class="k">def</span> <span class="nf">create_background</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create the initial background, stays the same.&quot;&quot;&quot;</span>
+
+        <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="p">)</span>
+        <span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">template</span><span class="o">.</span><span class="n">plane</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span> <span class="n">template</span><span class="o">.</span><span class="n">plane</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">color</span><span class="p">,</span> \
+                <span class="n">template</span><span class="o">.</span><span class="n">plane</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
+        <span class="k">del</span> <span class="n">draw</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/background.bmp&quot;</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="SimplyAnimateMath.draw_equation"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.draw_equation">[docs]</a>    <span class="k">def</span> <span class="nf">draw_equation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">equation</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Draws equation at the top.&quot;&quot;&quot;</span>
+
+        <span class="n">photo_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">photos</span><span class="p">[</span><span class="n">equation</span><span class="p">]</span>
+        <span class="n">eq_img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">photo_dir</span><span class="p">,</span> <span class="n">equation</span><span class="p">))</span>
+        <span class="n">eq_info</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">equation_info</span><span class="p">(</span><span class="n">eq_img</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">eq_img</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">(</span><span class="n">eq_info</span><span class="p">[</span><span class="s">&quot;thumb&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">eq_img</span><span class="p">,</span> <span class="n">eq_info</span><span class="p">[</span><span class="s">&quot;box&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/equation.bmp&quot;</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="SimplyAnimateMath.draw_numbers"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.draw_numbers">[docs]</a>    <span class="k">def</span> <span class="nf">draw_numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_files</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Puts number files on image.&quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">number_file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">number_files</span><span class="p">):</span>
+            <span class="n">photo_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">photos</span><span class="p">[</span><span class="n">number_file</span><span class="p">]</span>
+            <span class="n">n_img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">photo_dir</span><span class="p">,</span> <span class="n">number_file</span><span class="p">))</span>
+            <span class="n">n_info</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">number_info</span><span class="p">(</span><span class="n">n_img</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+            <span class="n">n_img</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">(</span><span class="n">n_info</span><span class="p">[</span><span class="s">&quot;thumb&quot;</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">n_img</span><span class="p">,</span> <span class="n">n_info</span><span class="p">[</span><span class="s">&quot;box&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/numbers.bmp&quot;</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="SimplyAnimateMath.draw_operator"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.draw_operator">[docs]</a>    <span class="k">def</span> <span class="nf">draw_operator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operator_file</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Draws operators on image.&quot;&quot;&quot;</span>
+
+        <span class="n">photo_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">photos</span><span class="p">[</span><span class="n">operator_file</span><span class="p">]</span>
+        <span class="n">op_img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">photo_dir</span><span class="p">,</span> <span class="n">operator_file</span><span class="p">))</span>
+        <span class="n">op_info</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">operator_info</span><span class="p">(</span><span class="n">op_img</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">op_img</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">(</span><span class="n">op_info</span><span class="p">[</span><span class="s">&quot;thumb&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">op_img</span><span class="p">,</span> <span class="n">op_info</span><span class="p">[</span><span class="s">&quot;box&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/operator.bmp&quot;</span><span class="p">)</span>
+
+</div>
+<div class="viewcode-block" id="SimplyAnimateMath.draw_equal"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.draw_equal">[docs]</a>    <span class="k">def</span> <span class="nf">draw_equal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">equal_file</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Draws equals on image.&quot;&quot;&quot;</span>
+
+        <span class="n">photo_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">photos</span><span class="p">[</span><span class="n">equal_file</span><span class="p">]</span>
+        <span class="n">op_img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;{0}/{1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">photo_dir</span><span class="p">,</span> <span class="n">equal_file</span><span class="p">))</span>
+        <span class="n">op_info</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">equal_info</span><span class="p">(</span><span class="n">op_img</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">op_img</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">(</span><span class="n">op_info</span><span class="p">[</span><span class="s">&quot;thumb&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">op_img</span><span class="p">,</span> <span class="n">op_info</span><span class="p">[</span><span class="s">&quot;box&quot;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/equal.bmp&quot;</span><span class="p">)</span>
+
+
+
+<span class="c"># Sphinx auto-doc can use these options.</span></div></div>
+<span class="n">PARSER</span> <span class="o">=</span> <span class="n">ap</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span>\
+        <span class="s">&quot;Pulls images together to make an animation&quot;</span><span class="p">,</span> \
+        <span class="n">formatter_class</span><span class="o">=</span><span class="n">ap</span><span class="o">.</span><span class="n">ArgumentDefaultsHelpFormatter</span><span class="p">)</span>
+
+<span class="n">PARSER</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--test_mode&quot;</span><span class="p">,</span> <span class="n">action</span> <span class="o">=</span> <span class="s">&quot;store_true&quot;</span><span class="p">,</span> \
+        <span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&quot;use for testing&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+
+    <span class="n">ARGS</span> <span class="o">=</span> <span class="n">PARSER</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="n">SAM</span> <span class="o">=</span> <span class="n">SimplyAnimateMath</span><span class="p">(</span><span class="n">test_mode</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+    <span class="n">SAM</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Simply Animate Math 0.1 documentation</a> &raquo;</li>
+          <li><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, Doug Sweetser.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
