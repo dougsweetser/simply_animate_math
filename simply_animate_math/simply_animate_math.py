@@ -26,8 +26,16 @@ class SimplyAnimateMath:
         self.draw_numbers(config.plane_t.numbers)
         self.draw_operator(config.plane_t.operator)
         self.draw_equal(config.equal)
-
+        
         self.work_img.show()
+
+        for equation, operator, number, file_name in zip(config.equations, config.operators, config.D2_constant_time_numbers, config.plane_t.file_names):
+            self.create_background()
+            self.draw_equation(equation)
+            self.draw_numbers(number)
+            self.draw_operator(operator)
+            self.draw_equal(config.equal)
+            self.work_img.save("Animations/{0}".format(file_name))
 
 
     def create_background(self):
@@ -37,7 +45,7 @@ class SimplyAnimateMath:
         draw.line(template.plane.line.pos, template.plane.line.color, \
                 template.plane.line.width)
         del draw
-        self.work_img.save("/tmp/back.bmp")
+        self.work_img.save("/tmp/background.bmp")
 
     def draw_equation(self, equation):
         """Draws equation at the top."""
@@ -47,7 +55,7 @@ class SimplyAnimateMath:
         eq_info = template.thumb_box_info("equation", eq_img.size)
         eq_img.thumbnail(eq_info["thumb"])
         self.work_img.paste(eq_img, eq_info["box"])
-        self.work_img.save("/tmp/de.bmp")
+        self.work_img.save("/tmp/equation.bmp")
 
 
     def draw_numbers(self, number_files):
@@ -59,7 +67,7 @@ class SimplyAnimateMath:
             n_info = template.number_info(n_img.size, i)
             n_img.thumbnail(n_info["thumb"])
             self.work_img.paste(n_img, n_info["box"])
-        self.work_img.save("/tmp/dn.bmp")
+        self.work_img.save("/tmp/numbers.bmp")
 
 
     def draw_operator(self, operator_file):
@@ -70,7 +78,7 @@ class SimplyAnimateMath:
         op_info = template.thumb_box_info("operator", op_img.size)
         op_img.thumbnail(op_info["thumb"])
         self.work_img.paste(op_img, op_info["box"])
-        self.work_img.save("/tmp/op.bmp")
+        self.work_img.save("/tmp/operator.bmp")
 
 
     def draw_equal(self, equal_file):
@@ -81,7 +89,7 @@ class SimplyAnimateMath:
         op_info = template.thumb_box_info("equal", op_img.size)
         op_img.thumbnail(op_info["thumb"])
         self.work_img.paste(op_img, op_info["box"])
-        self.work_img.save("/tmp/equals.bmp")
+        self.work_img.save("/tmp/equal.bmp")
 
 
 
