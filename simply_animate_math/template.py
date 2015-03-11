@@ -4,59 +4,49 @@ import config
 width = config.width
 height = config.height
 
-def equation_info(im_size):
-    """Calculate the thumbnail dimensions and box location."""
+# The first number scales the photo. The second shifts x, third shifts y.
+photo_type = Bunch()
+photo_type.equation = (0.8, 0.1, 0)
+photo_type.operator = (0.145, 0.2, 0.49)
+photo_type.equal = (0.145, 0.2, 0.77)
 
-    rescale = 0.8
+def thumb_info(im_size, rescale):
+    """Calculate the size for a thumb_name."""
+
     new_width = int(rescale * width)
     new_height = int(new_width * im_size[1] / im_size[0])
-    x_shift = int(0.1 * width)
-    info = {}
-    info["thumb"] = (new_width, new_height)
-    info["box"] = (x_shift, 0, x_shift + new_width, new_height)
-    return info
+    return (new_width, new_height)
+
+
+def box_info(im_size, thumb_size, x_scale, y_scale):
+    """Calculate the box based on image, thumb_size, and shifts."""
+
+    x_shift = int(x_scale * width)
+    y_shift = int(y_scale * height)
+    return (x_shift, y_shift, x_shift + thumb_size[0], y_shift + thumb_size[1])
+
+
+def thumb_box_info(type, im_size):
+    """Numbers needed to rescale and place a photo."""
+
+    thumb = thumb_info(im_size, photo_type[type][0])
+    box = box_info(im_size, thumb, photo_type[type][1], photo_type[type][2])
+    return {"thumb":thumb, "box":box}
+
 
 def number_info(im_size, i):
     """Calculate the thumbnail dimensions and box location."""
 
-    rescale = 0.25
-    new_width = int(rescale * width)
-    new_height = int(new_width * im_size[1] / im_size[0])
-    x_shift = int(0.5 * width - new_width / 2)
-    info = {}
-    info["thumb"] = (new_width, new_height)
-    info["box"] = (x_shift, int(new_height / 1.5 + i * new_height * 1.1), x_shift + new_width, int(new_height + new_height / 1.5 + i * new_height * 1.1))
-    return info
+    y_scale = (0.16666, 0.44166, 0.71666)
+    thumb = thumb_info(im_size, 0.25)
+    box = box_info(im_size, thumb, 0.375, y_scale[i])
+    return {"thumb":thumb, "box":box}
 
-def operator_info(im_size):
-    """Calculate the thumbnail dimensions and box location."""
 
-    rescale = 0.145
-    new_width = int(rescale * width)
-    new_height = int(new_width * im_size[1] / im_size[0])
-    x_shift = int(0.2 * width)
-    info = {}
-    info["thumb"] = (new_width, new_height)
-    y_shift = width * 0.49
-    info["box"] = (x_shift, int(y_shift), x_shift + new_width, int(new_height + y_shift))
-    return info
 
-def equal_info(im_size):
-    """Calculate the thumbnail dimensions and box location."""
-
-    rescale = 0.145
-    new_width = int(rescale * width)
-    new_height = int(new_width * im_size[1] / im_size[0])
-    x_shift = int(0.2 * width)
-    info = {}
-    info["thumb"] = (new_width, new_height)
-    y_shift = height * 0.77
-    info["box"] = (x_shift, int(y_shift), x_shift + new_width, int(new_height + y_shift))
-    return info
-
-eq_width = int(8 * width / 10)
-eq_height = int(3 * height / 10)
-eq_box = (0, 0, eq_width, eq_height)
+#eq_width = int(8 * width / 10)
+#eq_height = int(3 * height / 10)
+#eq_box = (0, 0, eq_width, eq_height)
 
 plane = Bunch()
 plane.line = Bunch()

@@ -32,23 +32,22 @@ class SimplyAnimateMath:
 
     def create_background(self):
         """Create the initial background, stays the same."""
-
+        
         draw = ImageDraw.Draw(self.work_img)
         draw.line(template.plane.line.pos, template.plane.line.color, \
                 template.plane.line.width)
         del draw
-        self.work_img.save("/tmp/background.bmp")
-
+        self.work_img.save("/tmp/back.bmp")
 
     def draw_equation(self, equation):
         """Draws equation at the top."""
 
         photo_dir = self.photos[equation]
         eq_img = Image.open("{0}/{1}".format(photo_dir, equation))
-        eq_info = template.equation_info(eq_img.size)
+        eq_info = template.thumb_box_info("equation", eq_img.size)
         eq_img.thumbnail(eq_info["thumb"])
         self.work_img.paste(eq_img, eq_info["box"])
-        self.work_img.save("/tmp/equation.bmp")
+        self.work_img.save("/tmp/de.bmp")
 
 
     def draw_numbers(self, number_files):
@@ -60,18 +59,18 @@ class SimplyAnimateMath:
             n_info = template.number_info(n_img.size, i)
             n_img.thumbnail(n_info["thumb"])
             self.work_img.paste(n_img, n_info["box"])
-        self.work_img.save("/tmp/numbers.bmp")
+        self.work_img.save("/tmp/dn.bmp")
 
 
     def draw_operator(self, operator_file):
-        """Draws operators on image."""
+        """Draws operator on image."""
 
         photo_dir = self.photos[operator_file]
         op_img = Image.open("{0}/{1}".format(photo_dir, operator_file))
-        op_info = template.operator_info(op_img.size)
+        op_info = template.thumb_box_info("operator", op_img.size)
         op_img.thumbnail(op_info["thumb"])
         self.work_img.paste(op_img, op_info["box"])
-        self.work_img.save("/tmp/operator.bmp")
+        self.work_img.save("/tmp/op.bmp")
 
 
     def draw_equal(self, equal_file):
@@ -79,10 +78,10 @@ class SimplyAnimateMath:
 
         photo_dir = self.photos[equal_file]
         op_img = Image.open("{0}/{1}".format(photo_dir, equal_file))
-        op_info = template.equal_info(op_img.size)
+        op_info = template.thumb_box_info("equal", op_img.size)
         op_img.thumbnail(op_info["thumb"])
         self.work_img.paste(op_img, op_info["box"])
-        self.work_img.save("/tmp/equal.bmp")
+        self.work_img.save("/tmp/equals.bmp")
 
 
 
