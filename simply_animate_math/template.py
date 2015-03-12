@@ -62,19 +62,39 @@ def number_2d_2_info(im_size, i):
     return {"thumb":thumb, "box":box}
 
 
+def number_2d_3_info(im_size, i):
+    """Calculate the thumbnail dimensions and box location."""
+
+    new_i = i % 3
+    y_scale = (0.16666, 0.44166, 0.71666)
+    thumb = thumb_info(im_size, 0.25)
+    box = box_info(im_size, thumb, 0.70, y_scale[new_i])
+    print("thumb: {0}, {1}".format(thumb[0], thumb[1]))
+    print("box: {0}, {1}, {2}, {3}".format(box[0], box[1], box[2], box[3]))
+    return {"thumb":thumb, "box":box}
+
+
 
 plane = Bunch()
 plane.line = Bunch()
-plane.line.pos = (int(width / 3), int(height * .703), \
-       int(width * 0.55), int(height * .703 ))
+plane.line.pos = (int(width * 0.331), int(height * .703), \
+       int(width * 0.58), int(height * .703 ))
 plane.line.color = "#000000"
 plane.line.width = 4
 plane.line.values = (plane.line.pos, plane.line.color, plane.line.width)
 
 dynamic_1d = Bunch()
 dynamic_1d.line = Bunch()
-dynamic_1d.line.pos = (int(width / 3), int(height * .703), \
-        int(width * 0.666), int(height * .703 ))
+dynamic_1d.line.pos = (int(width * 0.331), int(height * 0.703), \
+        int(width * 0.694), int(height * .703 ))
 dynamic_1d.line.color = "#000000"
 dynamic_1d.line.width = 4
 dynamic_1d.line.values = (dynamic_1d.line.pos, dynamic_1d.line.color, dynamic_1d.line.width)
+
+dynamic_3d = Bunch()
+dynamic_3d.line = Bunch()
+dynamic_3d.line.pos = (int(width * 0.331), int(height * .703), \
+        int(width * 0.96), int(height * .703 ))
+dynamic_3d.line.color = "#000000"
+dynamic_3d.line.width = 4
+dynamic_3d.line.values = (dynamic_3d.line.pos, dynamic_3d.line.color, dynamic_3d.line.width)

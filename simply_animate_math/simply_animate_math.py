@@ -24,13 +24,31 @@ class SimplyAnimateMath:
 
         count = 100
 
+        for equation, operator, number_2d, D1_numbers, D3_numbers in zip(config.equations, config.operators, config.D2_constant_time_numbers, config.D1.t.numbers, config.D3.t.numbers):
+            self.create_background(template.dynamic_3d.line)
+            self.draw_equation(equation)
+            self.draw_numbers_2d_1(number_2d)
+            self.draw_operator(operator)
+            self.draw_equal(config.equal)
+
+            for D1_number, D3_number in zip(D1_numbers, D3_numbers):
+                self.draw_numbers_2d_2(D1_number)
+                self.draw_numbers_2d_3(D3_number)
+
+                self.work_img.save("Animations/dynamic_3d_t.{0}.png".format(count))
+                count += 1
+
+        os.system("/opt/local/bin/convert -loop 0 -delay 60 Animations/dynamic_3d_t.*png Animations/dynamic_3d_t.gif")
+
+        count = 100
+
         for equation, operator, number_2d, D1_numbers in zip(config.equations, config.operators, config.D2_constant_time_numbers, config.D1.t.numbers):
             self.create_background(template.dynamic_1d.line)
             self.draw_equation(equation)
             self.draw_numbers_2d_1(number_2d)
             self.draw_operator(operator)
             self.draw_equal(config.equal)
-            
+
             for D1_number in D1_numbers:
                 self.draw_numbers_2d_2(D1_number)
 
@@ -48,7 +66,7 @@ class SimplyAnimateMath:
             self.draw_numbers_2d_1(number_2d)
             self.draw_operator(operator)
             self.draw_equal(config.equal)
-            
+
             for D1_number in D1_numbers:
                 self.draw_numbers_2d_2(D1_number)
 
@@ -66,7 +84,7 @@ class SimplyAnimateMath:
             self.draw_numbers_2d_1(number_2d)
             self.draw_operator(operator)
             self.draw_equal(config.equal)
-            
+
             for D1_number in D1_numbers:
                 self.draw_numbers_2d_2(D1_number)
 
@@ -117,7 +135,7 @@ class SimplyAnimateMath:
 
     def create_background(self, line):
         """Create the initial background, stays the same."""
-        
+
         self.work_img = self.base_img.copy()
         draw = ImageDraw.Draw(self.work_img)
         draw.line(line.pos, line.color, line.width)
@@ -169,15 +187,31 @@ class SimplyAnimateMath:
             n_img = Image.open("{0}/{1}".format(photo_dir, number_file))
             n_info = template.number_2d_2_info(n_img.size, i)
             n_img.thumbnail(n_info["thumb"])
-            print("sam 2d_2 thumb: {0}, {1}".format(n_info["thumb"][0], n_info["thumb"][1]))
-            print("sam 2d_2 box: {0}, {1}, {2}, {3}".format(n_info["box"][0], n_info["box"][1], n_info["box"][2], n_info["box"][3]))
-            print("sam size: {0}, {1}".format(n_img.size[0], n_img.size[1]))
 
             n_info["box"][3] = n_info["box"][1] + n_img.size[1]
 
             self.work_img.paste(n_img, n_info["box"])
 
         self.work_img.save("/tmp/numbers_2d_2.bmp")
+
+
+    def draw_numbers_2d_3(self, number_files):
+        """Puts number files on image."""
+
+        for i, number_file in enumerate(number_files):
+            photo_dir = self.photos[number_file]
+            n_img = Image.open("{0}/{1}".format(photo_dir, number_file))
+            n_info = template.number_2d_3_info(n_img.size, i)
+            n_img.thumbnail(n_info["thumb"])
+            print("sam 2d_3 thumb: {0}, {1}".format(n_info["thumb"][0], n_info["thumb"][1]))
+            print("sam 2d_3 box: {0}, {1}, {2}, {3}".format(n_info["box"][0], n_info["box"][1], n_info["box"][2], n_info["box"][3]))
+            print("sam size: {0}, {1}".format(n_img.size[0], n_img.size[1]))
+
+            n_info["box"][3] = n_info["box"][1] + n_img.size[1]
+
+            self.work_img.paste(n_img, n_info["box"])
+
+        self.work_img.save("/tmp/numbers_2d_3.bmp")
 
 
     def draw_operator(self, operator_file):
