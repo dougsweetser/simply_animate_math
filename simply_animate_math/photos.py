@@ -6,7 +6,7 @@ import inspect
 import os
 import re
 
-def get_photos(ext='jpg'):
+def get_photos(ext='(jpg$)|(gif$)'):
     """Walk through the photos directory, return a file/directory dictionary."""
 
     photo_dict = {}
