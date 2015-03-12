@@ -3,6 +3,7 @@
 import argparse as ap
 import os
 from PIL import Image, ImageColor, ImageDraw, ImageFont
+import re
 
 import config
 import photos
@@ -22,76 +23,99 @@ class SimplyAnimateMath:
     def run(self):
         "Runs all."
 
-        count = 100
 
         for equation, operator, number_2d, D1_numbers, D3_numbers in zip(config.equations, config.operators, config.D2_constant_time_numbers, config.D1.t.numbers, config.D3.t.numbers):
-            self.create_background(template.dynamic_3d.line)
-            self.draw_equation(equation)
-            self.draw_numbers_2d_1(number_2d)
-            self.draw_operator(operator)
-            self.draw_equal(config.equal)
+
+            count = 100
 
             for D1_number, D3_number in zip(D1_numbers, D3_numbers):
+                short_name = re.sub(r".jpg", "", operator)
+                self.create_background(template.dynamic_3d.line)
+                self.draw_equation(equation)
+                self.draw_numbers_2d_1(number_2d)
+                self.draw_operator(operator)
+                self.draw_equal(config.equal)
+
                 self.draw_numbers_2d_2(D1_number)
                 self.draw_numbers_2d_3(D3_number)
 
-                self.work_img.save("Animations/dynamic_3d_t.{0}.png".format(count))
+                self.work_img.save("Animations/dynamic_3d_t_{sn}.{ct}.png".format(sn=short_name, ct=count))
                 count += 1
 
-        os.system("/opt/local/bin/convert -loop 0 -delay 60 Animations/dynamic_3d_t.*png Animations/dynamic_3d_t.gif")
+            os.system("/opt/local/bin/convert -loop 0 -delay 60 Animations/dynamic_3d_t_{sn}.*.png Animations/dynamic_3d_t_{sn}.gif".format(sn=short_name))
 
-        count = 100
 
         for equation, operator, number_2d, D1_numbers in zip(config.equations, config.operators, config.D2_constant_time_numbers, config.D1.t.numbers):
-            self.create_background(template.dynamic_1d.line)
-            self.draw_equation(equation)
-            self.draw_numbers_2d_1(number_2d)
-            self.draw_operator(operator)
-            self.draw_equal(config.equal)
+            count = 100
 
             for D1_number in D1_numbers:
+                short_name = re.sub(r".jpg", "", operator)
+                self.create_background(template.dynamic_1d.line)
+                self.draw_equation(equation)
+                self.draw_numbers_2d_1(number_2d)
+                self.draw_operator(operator)
+                self.draw_equal(config.equal)
+
                 self.draw_numbers_2d_2(D1_number)
 
-                self.work_img.save("Animations/dynamic_1d_t.{0}.png".format(count))
+                self.work_img.save("Animations/dynamic_1d_t_{sn}.{ct}.png".format(sn=short_name, ct=count))
                 count += 1
 
-        os.system("/opt/local/bin/convert -loop 0 -delay 60 Animations/dynamic_1d_t.*png Animations/dynamic_1d_t.gif")
+            os.system("/opt/local/bin/convert -loop 0 -delay 60 Animations/dynamic_1d_t_{sn}.*.png Animations/dynamic_1d_t_{sn}.gif".format(sn=short_name))
 
 
-        count = 100
 
         for equation, operator, number_2d, D1_numbers in zip(config.equations, config.operators, config.D2_constant_motion_numbers, config.D1.m.numbers):
-            self.create_background(template.dynamic_1d.line)
-            self.draw_equation(equation)
-            self.draw_numbers_2d_1(number_2d)
-            self.draw_operator(operator)
-            self.draw_equal(config.equal)
-
+            count = 100
             for D1_number in D1_numbers:
+                short_name = re.sub(r".jpg", "", operator)
+                self.create_background(template.dynamic_1d.line)
+                self.draw_equation(equation)
+                self.draw_numbers_2d_1(number_2d)
+                self.draw_operator(operator)
+                self.draw_equal(config.equal)
+
                 self.draw_numbers_2d_2(D1_number)
 
-                self.work_img.save("Animations/dynamic_1d_m.{0}.png".format(count))
+                self.work_img.save("Animations/dynamic_1d_m_{sn}.{ct}.png".format(sn=short_name, ct=count))
                 count += 1
 
-        os.system("/opt/local/bin/convert -loop 0 -delay 60 Animations/dynamic_1d_m.*png Animations/dynamic_1d_m.gif")
+            os.system("/opt/local/bin/convert -loop 0 -delay 60 Animations/dynamic_1d_m_{sn}.*.png Animations/dynamic_1d_m_{sn}.gif".format(sn=short_name))
 
-
-        count = 100
 
         for equation, operator, number_2d, D1_numbers in zip(config.equations, config.operators, config.D2_constant_space_numbers, config.D1.r.numbers):
-            self.create_background(template.dynamic_1d.line)
-            self.draw_equation(equation)
-            self.draw_numbers_2d_1(number_2d)
-            self.draw_operator(operator)
-            self.draw_equal(config.equal)
-
+            count = 100
             for D1_number in D1_numbers:
+                short_name = re.sub(r".jpg", "", operator)
+                self.create_background(template.dynamic_1d.line)
+                self.draw_equation(equation)
+                self.draw_numbers_2d_1(number_2d)
+                self.draw_operator(operator)
+                self.draw_equal(config.equal)
+
                 self.draw_numbers_2d_2(D1_number)
 
-                self.work_img.save("Animations/dynamic_1d_r.{0}.png".format(count))
+                self.work_img.save("Animations/dynamic_1d_r_{sn}.{ct}.png".format(sn=short_name, ct=count))
                 count += 1
 
-        os.system("/opt/local/bin/convert -loop 0 -delay 60 Animations/dynamic_1d_r.*png Animations/dynamic_1d_r.gif")
+            os.system("/opt/local/bin/convert -loop 0 -delay 60 Animations/dynamic_1d_r_{sn}.*.png Animations/dynamic_1d_r_{sn}.gif".format(sn=short_name))
+
+        for equation, operator, number_2d, D1_numbers in zip(config.equations, config.operators, config.D2_constant_motion_numbers, config.D1.m.numbers):
+            count = 100
+            for D1_number in D1_numbers:
+                short_name = re.sub(r".jpg", "", operator)
+                self.create_background(template.dynamic_1d.line)
+                self.draw_equation(equation)
+                self.draw_numbers_2d_1(number_2d)
+                self.draw_operator(operator)
+                self.draw_equal(config.equal)
+
+                self.draw_numbers_2d_2(D1_number)
+
+                self.work_img.save("Animations/dynamic_1d_m_{sn}.{ct}.png".format(sn=short_name, ct=count))
+                count += 1
+
+            os.system("/opt/local/bin/convert -loop 0 -delay 60 Animations/dynamic_1d_m_{sn}.*.png Animations/dynamic_1d_m_{sn}.gif".format(sn=short_name))
 
 
         count = 100
