@@ -57,8 +57,6 @@ def number_2d_2_info(im_size, i):
     y_scale = (0.16666, 0.44166, 0.71666)
     thumb = thumb_info(im_size, 0.25)
     box = box_info(im_size, thumb, 0.6, y_scale[new_i])
-    print("thumb: {0}, {1}".format(thumb[0], thumb[1]))
-    print("box: {0}, {1}, {2}, {3}".format(box[0], box[1], box[2], box[3]))
     return {"thumb":thumb, "box":box}
 
 
@@ -69,8 +67,6 @@ def number_2d_3_info(im_size, i):
     y_scale = (0.16666, 0.44166, 0.71666)
     thumb = thumb_info(im_size, 0.25)
     box = box_info(im_size, thumb, 0.70, y_scale[new_i])
-    print("thumb: {0}, {1}".format(thumb[0], thumb[1]))
-    print("box: {0}, {1}, {2}, {3}".format(box[0], box[1], box[2], box[3]))
     return {"thumb":thumb, "box":box}
 
 

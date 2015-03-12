@@ -2,6 +2,8 @@
 
 from bunch import Bunch
 
+convert = "/opt/local/bin/convert"
+
 # Short names for files.
 D1r1, D1r2, D1r3 = "N1.jpg", "N2.jpg", "N3.jpg"
 D1r4, D1r5, D1r6 = "N4.jpg", "N5.jpg", "N6.jpg"
@@ -40,7 +42,7 @@ D1.t.times = [[D1r1, D1r1, D1r1], [D1r1, D1r1, D1r1], [D1r1, D10, D1r1], [D10, D
 
 D1.t.div = [[D1r1, D1r1, D1r1], [D1r1, D1r1, D1r1], [D1r1, D10, D1r1], [D1r1, D10, D10], [D1r1, D10, D10], [D1r1, D10, D10]]
 
-D1.t.numbers = (D1.t.plus, D1.t.minus, D1.t.times, D1.t.div)
+D1.t.numbers = [D1.t.plus, D1.t.minus, D1.t.times, D1.t.div]
 
 D1.r = Bunch()
 D1.r.plus = [[D1r123, D1r123, D1r123456], [D10, D10, D10], [D10, D10, D10], [D10, D10, D10], [D10, D10, D10], [D10, D10, D10]]
@@ -64,7 +66,7 @@ D1.m.div = [[D1r1, D1r1, D1r1], [D1r2, D1r1, D1r2], [D1r3, D10, D1r3], [D1r4, D1
 
 D1.m.numbers = (D1.m.plus, D1.m.minus, D1.m.times, D1.m.div)
 
-D2_constant_time_numbers = ([D2t3, D2t3, D2t6], [D2t6, D2t3, D2t3], [D2t3, D2t2, D2t6], [D2t6, D2t2, D2t3])
+D2_constant_time_numbers = [[D2t3, D2t3, D2t6], [D2t6, D2t3, D2t3], [D2t3, D2t2, D2t6], [D2t6, D2t2, D2t3]]
 D2_constant_space_numbers = ([D2r3, D2r3, D2r6], [D2r6, D2r3, D2r3], [D2r3, D2t2, D2r6], [D2r6, D2t2, D2r3])
 D2_constant_motion_numbers = ([D2rt3, D2rt3, D2rt6], [D2rt6, D2rt3, D2rt3], [D2rt3, D2t2, D2rt6], [D2rt6, D2t2, D2rt3])
 
