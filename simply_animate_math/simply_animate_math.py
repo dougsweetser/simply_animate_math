@@ -15,9 +15,10 @@ class SimplyAnimateMath:
     """
 
     def __init__(self, test_mode = False):
-        self.base_img = Image.new('RGB', (config.width, config.height), (183, 189, 177))
+        self.base_img = Image.new('RGBA', (config.width, config.height), (183, 189, 177, 256))
         self.photos = photos.get_photos()
         self.work_img = self.base_img.copy()
+        self.font = ImageFont.truetype(config.font, config.font_size)
 
 
     def run(self):
@@ -32,6 +33,8 @@ class SimplyAnimateMath:
         self.animate_plane_D1(config.D2_constant_motion_numbers, config.D1.m.numbers, "dynamic_1d_m")
 
         self.animate_plane_D1_D3(config.D2_constant_time_numbers, config.D1.t.numbers, config.D3.t.numbers, "dynamic_3d_t")
+        self.animate_plane_D1_D3(config.D2_constant_space_numbers, config.D1.r.numbers, config.D3.r.numbers, "dynamic_3d_r")
+        self.animate_plane_D1_D3(config.D2_constant_motion_numbers, config.D1.m.numbers, config.D3.m.numbers, "dynamic_3d_m")
 
 
     def create_background(self, line):
@@ -41,7 +44,8 @@ class SimplyAnimateMath:
         draw = ImageDraw.Draw(self.work_img)
         draw.line(line.pos, line.color, line.width)
         del draw
-        self.work_img.save("/tmp/background.bmp")
+
+        self.work_img.save("/tmp/background.png")
 
 
     def draw_equation(self, equation):
@@ -53,7 +57,7 @@ class SimplyAnimateMath:
         eq_img.thumbnail(eq_info["thumb"])
         eq_info["box"][3] = eq_info["box"][1] + eq_img.size[1]
         self.work_img.paste(eq_img, eq_info["box"])
-        self.work_img.save("/tmp/equation.bmp")
+        self.work_img.save("/tmp/equation.png")
 
 
     def draw_numbers(self, number_files):
@@ -65,7 +69,7 @@ class SimplyAnimateMath:
             n_info = template.number_info(n_img.size, i)
             n_img.thumbnail(n_info["thumb"])
             self.work_img.paste(n_img, n_info["box"])
-        self.work_img.save("/tmp/numbers.bmp")
+        self.work_img.save("/tmp/numbers.png")
 
 
     def draw_numbers_2d_1(self, number_files):
@@ -77,7 +81,7 @@ class SimplyAnimateMath:
             n_info = template.number_2d_1_info(n_img.size, i)
             n_img.thumbnail(n_info["thumb"])
             self.work_img.paste(n_img, n_info["box"])
-        self.work_img.save("/tmp/numbers_2d_1.bmp")
+        self.work_img.save("/tmp/numbers_2d_1.png")
 
 
     def draw_numbers_2d_2(self, number_files):
@@ -93,7 +97,7 @@ class SimplyAnimateMath:
 
             self.work_img.paste(n_img, n_info["box"])
 
-        self.work_img.save("/tmp/numbers_2d_2.bmp")
+        self.work_img.save("/tmp/numbers_2d_2.png")
 
 
     def draw_numbers_2d_3(self, number_files):
@@ -109,7 +113,26 @@ class SimplyAnimateMath:
 
             self.work_img.paste(n_img, n_info["box"])
 
-        self.work_img.save("/tmp/numbers_2d_3.bmp")
+        self.work_img.save("/tmp/numbers_2d_3.png")
+
+
+    def write_time_d1(self, time_string):
+        """Writes time as a number."""
+
+        draw = ImageDraw.Draw(self.work_img)
+        draw.text(template.time_1d_pos, time_string, font=self.font, fill=(0, 0, 0, 255))
+        del draw
+
+        self.work_img.save("/tmp/time_d1.png")
+
+    def write_time_d3(self, time_string):
+        """Writes time as a number."""
+
+        draw = ImageDraw.Draw(self.work_img)
+        draw.text(template.time_3d_pos, time_string, font=self.font, fill=(0, 0, 0, 255))
+        del draw
+
+        self.work_img.save("/tmp/time_d3.png")
 
 
     def draw_operator(self, operator_file):
@@ -120,7 +143,7 @@ class SimplyAnimateMath:
         op_info = template.thumb_box_info("operator", op_img.size)
         op_img.thumbnail(op_info["thumb"])
         self.work_img.paste(op_img, op_info["box"])
-        self.work_img.save("/tmp/operator.bmp")
+        self.work_img.save("/tmp/operator.png")
 
 
     def draw_equal(self, equal_file):
@@ -131,7 +154,7 @@ class SimplyAnimateMath:
         op_info = template.thumb_box_info("equal", op_img.size)
         op_img.thumbnail(op_info["thumb"])
         self.work_img.paste(op_img, op_info["box"])
-        self.work_img.save("/tmp/equal.bmp")
+        self.work_img.save("/tmp/equal.png")
 
 
     def animate_plane(self, D2_numbers, short_name="test", dir_name="Animations"):
@@ -147,7 +170,7 @@ class SimplyAnimateMath:
 
             self.work_img.save("{dn}/{sn}.{ct}.png".format(dn=dir_name, sn=short_name, ct=count))
 
-            os.system("{convert} -loop 0 -delay 60 {dn}/{sn}.*.png {dn}/{sn}.gif".format(\
+            os.system("{convert} -loop 0 -delay 350 {dn}/{sn}.*.png {dn}/{sn}.gif".format(\
                     convert=config.convert, dn=dir_name, sn=short_name))
         print("gif done: {dn}/{sn}.gif".format(dn=dir_name, sn=short_name))
 
@@ -157,41 +180,45 @@ class SimplyAnimateMath:
 
         for equation, operator, D2_number, D1_number_number in zip(config.equations, config.operators, D2_numbers, D1_number_numbers):
 
-            for count, D1_number in enumerate(D1_number_number, start=100):
+            for count, D1_number in enumerate(D1_number_number):
                 self.create_background(template.dynamic_1d.line)
                 self.draw_equation(equation)
                 self.draw_operator(operator)
                 self.draw_equal(config.equal)
                 self.draw_numbers_2d_1(D2_number)
                 self.draw_numbers_2d_2(D1_number)
+                self.write_time_d1(str(count + 1))
 
-                self.work_img.save("{dn}/{sn}.{ct}.png".format(dn=dir_name, sn=short_name, ct=count))
+                op_name = re.sub(r'....$', r'', operator)
+                self.work_img.save("{dn}/{sn}_{on}.{ct}.png".format(dn=dir_name, sn=short_name, on=op_name, ct=str(100 + count)))
 
-            os.system("{convert} -loop 0 -delay 60 {dn}/{sn}.*.png {dn}/{sn}.gif".format(\
-                    convert=config.convert, dn=dir_name, sn=short_name))
-        print("gif done: {dn}/{sn}.gif".format(dn=dir_name, sn=short_name))
+            os.system("{convert} -loop 0 -delay 60 {dn}/{sn}_{on}.*.png {dn}/{sn}_{on}.gif".format(\
+                    convert=config.convert, dn=dir_name, sn=short_name, on=op_name))
+            print("gif done: {dn}/{sn}_{on}.gif".format(dn=dir_name, sn=short_name, on=op_name))
+
 
     def animate_plane_D1_D3(self, D2_numbers, D1_number_numbers, D3_number_numbers, short_name="test", dir_name="Animations"):
         """Given a pair of 1D and 2D numbers, make plus, minus, times, and div animations."""
 
         for equation, operator, D2_number, D1_number_number, D3_number_number in zip(config.equations, config.operators, D2_numbers, D1_number_numbers, D3_number_numbers):
 
-            count = 100
-
-            for count, D1_number, D3_number in zip(range(100, 100 + len(D1_number_number)), D1_number_number, D3_number_number):
-                self.create_background(template.dynamic_1d.line)
+            for count, D1_number, D3_number in zip(range(0, len(D1_number_number)), D1_number_number, D3_number_number):
+                self.create_background(template.dynamic_3d.line)
                 self.draw_equation(equation)
                 self.draw_operator(operator)
                 self.draw_equal(config.equal)
                 self.draw_numbers_2d_1(D2_number)
                 self.draw_numbers_2d_2(D1_number)
                 self.draw_numbers_2d_3(D3_number)
+                self.write_time_d1(str(count + 1))
+                self.write_time_d3(str(count + 1))
 
-                self.work_img.save("{dn}/{sn}.{ct}.png".format(dn=dir_name, sn=short_name, ct=count))
+                op_name = re.sub(r'....$', r'', operator)
+                self.work_img.save("{dn}/{sn}_{on}.{ct}.png".format(dn=dir_name, sn=short_name, on=op_name, ct=count + 100))
 
-            os.system("{convert} -loop 0 -delay 60 {dn}/{sn}.*.png {dn}/{sn}.gif".format(\
-                    convert=config.convert, dn=dir_name, sn=short_name))
-        print("gif done: {dn}/{sn}.gif".format(dn=dir_name, sn=short_name))
+            os.system("{convert} -loop 0 -delay 60 {dn}/{sn}_{on}.*.png {dn}/{sn}_{on}.gif".format(\
+                    convert=config.convert, dn=dir_name, sn=short_name, on=op_name))
+            print("gif done: {dn}/{sn}_{on}.gif".format(dn=dir_name, sn=short_name, on=op_name))
 
 
 # Sphinx auto-doc can use these options.

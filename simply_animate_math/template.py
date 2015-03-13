@@ -66,7 +66,7 @@ def number_2d_3_info(im_size, i):
     new_i = i % 3
     y_scale = (0.16666, 0.44166, 0.71666)
     thumb = thumb_info(im_size, 0.25)
-    box = box_info(im_size, thumb, 0.70, y_scale[new_i])
+    box = box_info(im_size, thumb, 0.71, y_scale[new_i])
     return {"thumb":thumb, "box":box}
 
 
@@ -94,3 +94,7 @@ dynamic_3d.line.pos = (int(width * 0.331), int(height * .703), \
 dynamic_3d.line.color = "#000000"
 dynamic_3d.line.width = 4
 dynamic_3d.line.values = (dynamic_3d.line.pos, dynamic_3d.line.color, dynamic_3d.line.width)
+
+
+time_1d_pos = (width * 0.63, height * 0.945)
+time_3d_pos = (width * 0.805, height * 0.945)
