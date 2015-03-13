@@ -76,9 +76,10 @@ D1.m.div = [[D1r1, D1r1, D1r1], [D1r2, D1r1, D1r2], [D1r3, D10, D1r3], [D1r4, D1
 
 D1.m.numbers = (D1.m.plus, D1.m.minus, D1.m.times, D1.m.div)
 
-D2_constant_time_numbers = [[D2t3, D2t3, D2t6], [D2t6, D2t3, D2t3], [D2t3, D2t2, D2t6], [D2t6, D2t2, D2t3]]
-D2_constant_space_numbers = ([D2r3, D2r3, D2r6], [D2r6, D2r3, D2r3], [D2r3, D2t2, D2r6], [D2r6, D2t2, D2r3])
-D2_constant_motion_numbers = ([D2rt3, D2rt3, D2rt6], [D2rt6, D2rt3, D2rt3], [D2rt3, D2t2, D2rt6], [D2rt6, D2t2, D2rt3])
+D2_constant_numbers = Bunch()
+D2_constant_numbers.t = [[D2t3, D2t3, D2t6], [D2t6, D2t3, D2t3], [D2t3, D2t2, D2t6], [D2t6, D2t2, D2t3]]
+D2_constant_numbers.r = ([D2r3, D2r3, D2r6], [D2r6, D2r3, D2r3], [D2r3, D2t2, D2r6], [D2r6, D2t2, D2r3])
+D2_constant_numbers.m = ([D2rt3, D2rt3, D2rt6], [D2rt6, D2rt3, D2rt3], [D2rt3, D2t2, D2rt6], [D2rt6, D2t2, D2rt3])
 
 
 
@@ -118,5 +119,5 @@ D3.m.div = [[D3m1, D3m1, D3m1], [D3m2, D3m1, D3m2], [D3m3, D30, D3m3], [D3m4, D3
 D3.m.numbers = (D3.m.plus, D3.m.minus, D3.m.times, D3.m.div)
 
 
-font = '/Users/doug/Library/Application Support/OpenOffice.org 2.1/user/fonts/TimesNewRoman.ttf'
+font = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Fonts/Core/TimesNewRoman.ttf'
 font_size = 32

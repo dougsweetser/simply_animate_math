@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import argparse as ap
 import os
 from PIL import Image, ImageColor, ImageDraw, ImageFont
@@ -24,18 +23,17 @@ class SimplyAnimateMath:
     def run(self):
         "Runs all."
 
-        self.animate_plane(config.D2_constant_time_numbers, "plane_t")
-        self.animate_plane(config.D2_constant_space_numbers, "plane_r")
-        self.animate_plane(config.D2_constant_motion_numbers, "plane_m")
+        constants = ("t", "r", "m")
 
-        self.animate_plane_D1(config.D2_constant_time_numbers, config.D1.t.numbers, "dynamic_1d_t")
-        self.animate_plane_D1(config.D2_constant_space_numbers, config.D1.r.numbers, "dynamic_1d_r")
-        self.animate_plane_D1(config.D2_constant_motion_numbers, config.D1.m.numbers, "dynamic_1d_m")
+        for constant in constants:
+            self.animate_plane(config.D2_constant_numbers[constant], "plane_{c}".format(c=constant))
+            self.animate_plane_D1(config.D2_constant_numbers[constant], config.D1[constant]["numbers"], "dynamic_D1_{c}".format(c=constant))
+            self.animate_plane_D1_D3(config.D2_constant_numbers[constant], config.D1[constant]["numbers"], config.D3[constant]["numbers"], "dynamic_D3_{c}".format(c=constant))
 
-        self.animate_plane_D1_D3(config.D2_constant_time_numbers, config.D1.t.numbers, config.D3.t.numbers, "dynamic_3d_t")
-        self.animate_plane_D1_D3(config.D2_constant_space_numbers, config.D1.r.numbers, config.D3.r.numbers, "dynamic_3d_r")
-        self.animate_plane_D1_D3(config.D2_constant_motion_numbers, config.D1.m.numbers, config.D3.m.numbers, "dynamic_3d_m")
-
+            for common_name in ("dynamic_D1", "dynamic_D3"):
+                self.merge_2_gifs(common_name, constant, "plus", "times")
+                self.merge_2_gifs(common_name, constant, "minus", "div")
+                self.merge_box_gifs(common_name, constant, "plus_times", "minus_div")
 
     def create_background(self, line):
         """Create the initial background, stays the same."""
@@ -221,13 +219,36 @@ class SimplyAnimateMath:
             print("gif done: {dn}/{sn}_{on}.gif".format(dn=dir_name, sn=short_name, on=op_name))
 
 
+    def merge_2_gifs(self, common_name, constant, operator_1, operator_2, dir_name="Animations"):
+        """Merge two animations animations."""
+
+        file_1 = "{dn}/{cn}_{con}_{op_1}.gif".format(dn=dir_name, cn=common_name, con=constant, op_1=operator_1)
+        file_2 = "{dn}/{cn}_{con}_{op_2}.gif".format(dn=dir_name, cn=common_name, con=constant, op_2=operator_2)
+        file_1_2 = "{dn}/{cn}_{con}_{op_1}_{op_2}.gif".format(dn=dir_name, cn=common_name, con=constant, op_1=operator_1, op_2=operator_2)
+
+        command = "{convert} {f_1} -repage {w2}x{h} -coalesce null: \( {f_2} -coalesce \) -geometry +{w}+0 -layers Composite {f_1_2}".format(\
+                convert=config.convert, f_1=file_1, f_2=file_2, f_1_2=file_1_2, w2=config.width * 2, w=config.width, h=config.height)
+        print(command)
+        os.system(command)
+        print("merge done: {f_1_2}".format(f_1_2=file_1_2))
+
+
+    def merge_box_gifs(self, common_name, constant, operator_1, operator_2, dir_name="Animations"):
+        """Merge two animations animations."""
+
+        file_1 = "{dn}/{cn}_{con}_{op_1}.gif".format(dn=dir_name, cn=common_name, con=constant, op_1=operator_1)
+        file_2 = "{dn}/{cn}_{con}_{op_2}.gif".format(dn=dir_name, cn=common_name, con=constant, op_2=operator_2)
+        file_1_2 = "{dn}/{cn}_{con}_{op_1}_{op_2}.gif".format(dn=dir_name, cn=common_name, con=constant, op_1=operator_1, op_2=operator_2)
+
+        os.system("{convert} {f_1} -repage {w2}x{h2} -coalesce null: \( {f_2} -coalesce \) -geometry +0+{h} -layers Composite {f_1_2}".format(\
+                convert=config.convert, f_1=file_1, f_2=file_2, f_1_2=file_1_2, w2=config.width * 2, h=config.height, h2=config.height * 2))
+        print("merge done: {f_1_2}".format(f_1_2=file_1_2))
+
+
 # Sphinx auto-doc can use these options.
 PARSER = ap.ArgumentParser(description=\
         "Pulls images together to make an animation", \
         formatter_class=ap.ArgumentDefaultsHelpFormatter)
-
-PARSER.add_argument("--test_mode", action = "store_true", \
-        default=False, help="use for testing")
 
 
 if __name__ == "__main__":
