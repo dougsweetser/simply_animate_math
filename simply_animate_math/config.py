@@ -23,7 +23,7 @@ d30 = "N000.jpg"
 d3m1, d3m2, d3m3 = "N1n1n1_bigger.jpg", "N2n2n1.jpg", "N3n3n1.jpg"
 d3m4, d3m5, d3m6 = "N4n4n1.jpg", "N5n5n1.jpg", "N6n6n1.jpg"
 d3m12, d3m123, d3m123456 = "N1n1n1_2n2n1.jpg", "N1n1n1_2n2n1_3n3n1.jpg", "N1n1n1_2n2n1_3n3n1_4n4n1_5n5n1_6n6n1.jpg"
-d30 = "N000.jpg"
+d30_bigger = "N000_bigger.jpg"
 
 d2t2, d2t3, d2t6 = "N1n1_2n1.jpg", "N1n1_2n1_3n1.jpg", "N1n1_2n1_3n1_4n1_5n1_6n1.jpg"
 d2r2, d2r3, d2r6 = "N1n1_1n2.jpg", "N1n1_1n2_1n3.jpg", "N1n1_1n2_1n3_1n4_1n5_1n6.jpg"
@@ -108,13 +108,13 @@ d3.r.div = [[d3r123456, d3r1, d3r123], [d30, d3r1, d30], [d30, d30, d30], [d30, 
 d3.r.numbers = (d3.r.plus, d3.r.minus, d3.r.times, d3.r.div)
 
 d3.m = Bunch()
-d3.m.plus = [[d3m1, d3m1, d3m1], [d3m2, d3m2, d3m2], [d3m3, d3m3, d3m3], [d30, d30, d3m4], [d30, d30, d3m5], [d30, d30, d3m6]]
+d3.m.plus = [[d3m1, d3m1, d3m1], [d3m2, d3m2, d3m2], [d3m3, d3m3, d3m3], [d30_bigger, d30_bigger, d3m4], [d30_bigger, d30_bigger, d3m5], [d30_bigger, d30_bigger, d3m6]]
 
-d3.m.minus = [[d3m1, d3m1, d3m1], [d3m2, d3m2, d3m2], [d3m3, d3m3, d3m3], [d3m4, d30, d30], [d3m5, d30, d30], [d3m6, d30, d30]]
+d3.m.minus = [[d3m1, d3m1, d3m1], [d3m2, d3m2, d3m2], [d3m3, d3m3, d3m3], [d3m4, d30_bigger, d30_bigger], [d3m5, d30_bigger, d30_bigger], [d3m6, d30_bigger, d30_bigger]]
 
-d3.m.times = [[d3m1, d3m1, d3m1], [d3m2, d3m1, d3m2], [d3m3, d30, d3m3], [d30, d30, d3m4], [d30, d30, d3m5], [d30, d30, d3m6]]
+d3.m.times = [[d3m1, d3m1, d3m1], [d3m2, d3m1, d3m2], [d3m3, d30_bigger, d3m3], [d30_bigger, d30_bigger, d3m4], [d30_bigger, d30_bigger, d3m5], [d30_bigger, d30_bigger, d3m6]]
 
-d3.m.div = [[d3m1, d3m1, d3m1], [d3m2, d3m1, d3m2], [d3m3, d30, d3m3], [d3m4, d30, d30], [d3m5, d30, d30], [d3m6, d30, d30]]
+d3.m.div = [[d3m1, d3m1, d3m1], [d3m2, d3m1, d3m2], [d3m3, d30_bigger, d3m3], [d3m4, d30_bigger, d30_bigger], [d3m5, d30_bigger, d30_bigger], [d3m6, d30_bigger, d30_bigger]]
 
 d3.m.numbers = (d3.m.plus, d3.m.minus, d3.m.times, d3.m.div)
 
