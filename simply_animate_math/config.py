@@ -20,7 +20,7 @@ d3r4, d3r5, d3r6 = "N1n4n1.jpg", "N1n5n1.jpg", "N1n6n1.jpg"
 d3r12, d3r123, d3r123456 = "N1n1n1_1n2n1.jpg", "N1n1n1_1n2n1_1n3n1.jpg", "N1n1n1_1n2n1_1n3n1_1n4n1_1n5n1_1n6n1.jpg"
 d30 = "N000.jpg"
 
-d3m1, d3m2, d3m3 = "N1n1n1.jpg", "N2n2n1.jpg", "N3n3n1.jpg"
+d3m1, d3m2, d3m3 = "N1n1n1_bigger.jpg", "N2n2n1.jpg", "N3n3n1.jpg"
 d3m4, d3m5, d3m6 = "N4n4n1.jpg", "N5n5n1.jpg", "N6n6n1.jpg"
 d3m12, d3m123, d3m123456 = "N1n1n1_2n2n1.jpg", "N1n1n1_2n2n1_3n3n1.jpg", "N1n1n1_2n2n1_3n3n1_4n4n1_5n5n1_6n6n1.jpg"
 d30 = "N000.jpg"
