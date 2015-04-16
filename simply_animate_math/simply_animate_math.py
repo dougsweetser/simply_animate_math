@@ -35,6 +35,9 @@ class SimplyAnimateMath:
     def run(self):
         "Runs all."
 
+        self.animate_plane(config.pure_numbers, "pure")
+        self.animate_plane(config.qft_numbers, "qft")
+
         constants = ("t", "r", "m")
 
         for constant in constants:
