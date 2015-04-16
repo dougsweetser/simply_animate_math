@@ -8,9 +8,9 @@ This tool take a few photos to create a gif animation about space-time math.  Ho
 
 Installing
 ==========
-Do one time: Virtual environment setup
+Do one time: Virtual environment setup. Note: the curl bit is needed for python version 3.3 but not 3.4.
 ``` Shell
-virtualenv -p python3 venv-sam
+> virtualenv -p python3 venv-sam
 > source venv-sam/bin/activate
 > curl https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py | python
 > deactivate
