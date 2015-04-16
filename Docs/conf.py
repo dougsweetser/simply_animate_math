@@ -34,7 +34,6 @@ sys.path.insert(0, parent + "/simply_animate_math")
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinxcontrib.autoprogram',
     'sphinx.ext.doctest',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',

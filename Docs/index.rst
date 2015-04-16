@@ -6,19 +6,16 @@
 Welcome to Simply Animate Math's documentation!
 ===============================================
 
-Contents:
+Tool to make gif animations about space-time math.  Has not been generalized, but can make an image like so:
+
+.. image:: images/dynamic_d3_t_plus.gif
 
 .. toctree::
    :maxdepth: 2
 
-.. autoprogram:: simply_animate_math:PARSER
-    :prog: simply_animate_math.py
+simply_animate_math.py
+======================
 .. automodule:: simply_animate_math
-    :members:
-
-.. autoprogram:: photos:PARSER
-    :prog: photos.py
-.. automodule:: photos
     :members:
 
 config.py
@@ -27,8 +24,13 @@ config.py
     :members:
 
 template.py
-========
+===========
 .. automodule:: template
+    :members:
+
+photos.py
+=========
+.. automodule:: photos
     :members:
 
 Indices and tables
