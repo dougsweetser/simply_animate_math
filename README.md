@@ -9,16 +9,18 @@ This tool take a few photos to create a gif animation about space-time math.  Ho
 Installing
 ==========
 Do one time: Virtual environment setup
-> virtualenv -p python3 venv-sam
+``` Shell
+virtualenv -p python3 venv-sam
 > source venv-sam/bin/activate
 > curl https://raw.githubusercontent.com/pypa/pip/master/contrib/get-pip.py | python
 > deactivate
 > source venv-dj/bin/activate
 > pip install -r Requirements.txt
-
+```
 Each time thereafter:
+``` Shell
 > source venv-sam/bin/activate
-
+```
 
 Author
 ======
