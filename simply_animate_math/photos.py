@@ -1,12 +1,19 @@
 #!/usr/bin/env python
-"""Data that matches a dictionary to files."""
+"""
+usage: photos.py [-h] [-l]
 
-import argparse as ap
+Finds all photos in the Photos directory
+
+optional arguments:
+  -h, --help  show this help message and exit
+  -l, --ls    list the images (default: False)
+"""
+from docopt import docopt
 import inspect
 import os
 import re
 
-def get_photos(ext='(jpg$)|(gif$)'):
+def get_photos(ext='(jpg$)|(gif$)|(png)'):
     """Walk through the photos directory, return a file/directory dictionary."""
 
     photo_dict = {}
@@ -29,17 +36,9 @@ def print_ls():
         print(photo_dir, photo)
 
 
-# Sphinx auto-doc can use these options.
-PARSER = ap.ArgumentParser(description=\
-        "Finds all photos in the Photos directory", \
-        formatter_class=ap.ArgumentDefaultsHelpFormatter)
-
-PARSER.add_argument("-l", "--ls", action="store_true", \
-        default=False, help="list the images")
-
 if __name__ == "__main__":
 
-    ARGS = PARSER.parse_args()
+    ARGS = docopt(__doc__)
 
-    if ARGS.ls:
+    if ARGS['--ls']:
         print_ls()
