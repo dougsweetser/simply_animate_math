@@ -8,7 +8,7 @@ Welcome to Simply Animate Math's documentation!
 
 Tool to make gif animations about space-time math.  Has not been generalized, but can make an image like so:
 
-.. image:: images/dynamic_d3_t_plus.gif
+.. image:: images/dynamic_d3_m_plus.gif
 
 .. toctree::
    :maxdepth: 2
