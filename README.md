@@ -3,7 +3,7 @@ Simple Animation Math
 
 This tool take a few photos to create a gif animation about space-time math.  How to make this work in a more general way has not been figured out. Here is an example of the output:
 
-!(simply_animate_math/Animations/dynamic_d3_t_plus.gif)
+![](https://github.com/dougsweetser/simply_animate_math/blob/master/simply_animate_math/Animations/dynamic_d3_m_plus.gif)
 
 
 Installing
