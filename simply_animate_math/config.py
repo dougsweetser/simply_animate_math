@@ -1,10 +1,18 @@
 """Stores values used in all drawing."""
 
 from bunch import Bunch
+import matplotlib.font_manager
 
-convert = "/opt/local/bin/convert"
+convert = "/usr/local/bin/convert"
 
 # Short names for files.
+p0, q0 = "pure_0.jgp", "qft_0.jpg"
+p1, p2, p3 = "pure_1.jpg", "pure_2.jpg", "pure_3.jpg"
+p4, p5, p6 = "pure_4.jpg", "pure_5.jpg", "pure_6.jpg"
+q1, q2, q3 = "qft_1.jpg", "qft_2.jpg", "qft_3.jpg"
+q4, q5, q6 = "qft_4.jpg", "qft_5.jpg", "qft_6.jpg"
+
+
 d1r1, d1r2, d1r3 = "N1.jpg", "N2.jpg", "N3.jpg"
 d1r4, d1r5, d1r6 = "N4.jpg", "N5.jpg", "N6.jpg"
 d1r12, d1r123, d1r123456 = "N1_2.jpg", "N1_2_3.jpg", "N1_2_3_4_5_6.jpg"
@@ -76,6 +84,9 @@ d1.m.div = [[d1r1, d1r1, d1r1], [d1r2, d1r1, d1r2], [d1r3, d10, d1r3], [d1r4, d1
 
 d1.m.numbers = (d1.m.plus, d1.m.minus, d1.m.times, d1.m.div)
 
+pure_numbers = [[p3, p3, p6], [p6, p3, p3], [p3, p2, p6], [p6, p2, p3]]
+qft_numbers = [[q3, q3, q6], [q6, q3, q3], [q3, q2, q6], [q6, q2, q3]]
+
 d2_constant_numbers = Bunch()
 d2_constant_numbers.t = [[d2t3, d2t3, d2t6], [d2t6, d2t3, d2t3], [d2t3, d2t2, d2t6], [d2t6, d2t2, d2t3]]
 d2_constant_numbers.r = ([d2r3, d2r3, d2r6], [d2r6, d2r3, d2r3], [d2r3, d2t2, d2r6], [d2r6, d2t2, d2r3])
@@ -118,6 +129,7 @@ d3.m.div = [[d3m1, d3m1, d3m1], [d3m2, d3m1, d3m2], [d3m3, d30_bigger, d3m3], [d
 
 d3.m.numbers = (d3.m.plus, d3.m.minus, d3.m.times, d3.m.div)
 
-
-font = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Fonts/Core/TimesNewRoman.ttf'
+# Font stuff.
+FM = matplotlib.font_manager.FontManager()
+font = FM.findfont(r'Times New Roman')
 font_size = 32
