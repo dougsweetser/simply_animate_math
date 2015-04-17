@@ -55,10 +55,27 @@
             
   <div class="section" id="module-photos">
 <span id="photos-module"></span><h1>photos module<a class="headerlink" href="#module-photos" title="Permalink to this headline">¶</a></h1>
-<p>Data that matches a dictionary to files.</p>
+<p>usage: photos.py [-h] [-l]</p>
+<p>Finds all photos in the Photos directory</p>
+<dl class="docutils">
+<dt>optional arguments:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>show this help message and exit</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-l</span>, <span class="option">--ls</span></kbd></td>
+<td>list the images (default: False)</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
 <dl class="function">
 <dt id="photos.get_photos">
-<tt class="descclassname">photos.</tt><tt class="descname">get_photos</tt><big>(</big><em>ext='(jpg$)|(gif$)'</em><big>)</big><a class="reference internal" href="_modules/photos.html#get_photos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#photos.get_photos" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">photos.</tt><tt class="descname">get_photos</tt><big>(</big><em>ext='(jpg$)|(gif$)|(png)'</em><big>)</big><a class="reference internal" href="_modules/photos.html#get_photos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#photos.get_photos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Walk through the photos directory, return a file/directory dictionary.</p>
 </dd></dl>
 
