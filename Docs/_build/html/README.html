@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Python Module Index &mdash; Simply Animate Math 0.1 documentation</title>
+    <title>Notes &mdash; Simply Animate Math 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,14 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="Simply Animate Math 0.1 documentation" href="index.html" />
- 
-
-    <script type="text/javascript">
-      DOCUMENTATION_OPTIONS.COLLAPSE_INDEX = true;
-    </script>
-
-
+    <link rel="top" title="Simply Animate Math 0.1 documentation" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -41,7 +34,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="#" title="Python Module Index"
+          <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li><a href="index.html">Simply Animate Math 0.1 documentation</a> &raquo;</li> 
       </ul>
@@ -52,50 +45,20 @@
         <div class="bodywrapper">
           <div class="body">
             
-
-   <h1>Python Module Index</h1>
-
-   <div class="modindex-jumpbox">
-   <a href="#cap-c"><strong>c</strong></a> | 
-   <a href="#cap-p"><strong>p</strong></a> | 
-   <a href="#cap-s"><strong>s</strong></a> | 
-   <a href="#cap-t"><strong>t</strong></a>
-   </div>
-
-   <table class="indextable modindextable" cellspacing="0" cellpadding="2">
-     <tr class="pcap"><td></td><td>&nbsp;</td><td></td></tr>
-     <tr class="cap" id="cap-c"><td></td><td>
-       <strong>c</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="config.html#module-config"><tt class="xref">config</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="pcap"><td></td><td>&nbsp;</td><td></td></tr>
-     <tr class="cap" id="cap-p"><td></td><td>
-       <strong>p</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="photos.html#module-photos"><tt class="xref">photos</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="pcap"><td></td><td>&nbsp;</td><td></td></tr>
-     <tr class="cap" id="cap-s"><td></td><td>
-       <strong>s</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="simply_animate_math.html#module-simply_animate_math"><tt class="xref">simply_animate_math</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="pcap"><td></td><td>&nbsp;</td><td></td></tr>
-     <tr class="cap" id="cap-t"><td></td><td>
-       <strong>t</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="template.html#module-template"><tt class="xref">template</tt></a></td><td>
-       <em></em></td></tr>
-   </table>
+  <div class="section" id="notes">
+<h1>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h1>
+<p>To make the original version:</p>
+<p>&gt; sphinx-api -F -o Docs simply_animate_math</p>
+<p>The conf.py needed a modification to fix finding the code:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">&#39;.&#39;</span><span class="p">))</span>
+<span class="n">parent</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="s">&#39;conf.py&#39;</span><span class="p">),</span> <span class="s">&quot;..&quot;</span><span class="p">))</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parent</span> <span class="o">+</span> <span class="s">&quot;/simply_animate_math&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then <em>make html</em> in the Docs directory does the trick.</p>
+<p>If any further programs are added, rerun the command with a <em>-f</em> for <em>-F</em></p>
+</div>
 
 
           </div>
@@ -103,6 +66,11 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/README.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
@@ -127,7 +95,7 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="#" title="Python Module Index"
+          <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li><a href="index.html">Simply Animate Math 0.1 documentation</a> &raquo;</li> 
       </ul>

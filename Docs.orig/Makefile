@@ -85,17 +85,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/simply_animate_math.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/SimplyAnimateMath.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/simply_animate_math.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/SimplyAnimateMath.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/simply_animate_math"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/simply_animate_math"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/SimplyAnimateMath"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/SimplyAnimateMath"
 	@echo "# devhelp"
 
 epub:

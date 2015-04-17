@@ -69,7 +69,7 @@
 <span class="kn">import</span> <span class="nn">photos</span>
 <span class="kn">import</span> <span class="nn">template</span>
 
-<div class="viewcode-block" id="SimplyAnimateMath"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath">[docs]</a><span class="k">class</span> <span class="nc">SimplyAnimateMath</span><span class="p">:</span>
+<div class="viewcode-block" id="SimplyAnimateMath"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath">[docs]</a><span class="k">class</span> <span class="nc">SimplyAnimateMath</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A tool to take photos and make animations.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -82,7 +82,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">font</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">font_size</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="SimplyAnimateMath.run"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SimplyAnimateMath.run"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="s">&quot;Runs all.&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">animate_plane</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">pure_numbers</span><span class="p">,</span> <span class="s">&quot;pure&quot;</span><span class="p">)</span>
@@ -109,7 +109,7 @@
                 <span class="n">merge_2_gifs</span><span class="p">(</span><span class="n">common_name</span><span class="p">,</span> <span class="n">constant</span><span class="p">,</span> <span class="s">&quot;minus&quot;</span><span class="p">,</span> <span class="s">&quot;div&quot;</span><span class="p">)</span>
                 <span class="n">merge_box_gifs</span><span class="p">(</span><span class="n">common_name</span><span class="p">,</span> <span class="n">constant</span><span class="p">,</span> <span class="s">&quot;plus_times&quot;</span><span class="p">,</span> <span class="s">&quot;minus_div&quot;</span><span class="p">)</span>
 </div>
-<div class="viewcode-block" id="SimplyAnimateMath.create_background"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.create_background">[docs]</a>    <span class="k">def</span> <span class="nf">create_background</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+<div class="viewcode-block" id="SimplyAnimateMath.create_background"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.create_background">[docs]</a>    <span class="k">def</span> <span class="nf">create_background</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Create the initial background, stays the same.&quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_img</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -120,7 +120,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/background.png&quot;</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="SimplyAnimateMath.draw_equation"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.draw_equation">[docs]</a>    <span class="k">def</span> <span class="nf">draw_equation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">equation</span><span class="p">):</span>
+<div class="viewcode-block" id="SimplyAnimateMath.draw_equation"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.draw_equation">[docs]</a>    <span class="k">def</span> <span class="nf">draw_equation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">equation</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Draws equation at the top.&quot;&quot;&quot;</span>
 
         <span class="n">photo_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">photos</span><span class="p">[</span><span class="n">equation</span><span class="p">]</span>
@@ -132,7 +132,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/equation.png&quot;</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="SimplyAnimateMath.draw_numbers"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.draw_numbers">[docs]</a>    <span class="k">def</span> <span class="nf">draw_numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_files</span><span class="p">):</span>
+<div class="viewcode-block" id="SimplyAnimateMath.draw_numbers"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.draw_numbers">[docs]</a>    <span class="k">def</span> <span class="nf">draw_numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_files</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Puts number files on image.&quot;&quot;&quot;</span>
 
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">number_file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">number_files</span><span class="p">):</span>
@@ -144,7 +144,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/numbers.png&quot;</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="SimplyAnimateMath.draw_numbers_2d_1"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.draw_numbers_2d_1">[docs]</a>    <span class="k">def</span> <span class="nf">draw_numbers_2d_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_files</span><span class="p">):</span>
+<div class="viewcode-block" id="SimplyAnimateMath.draw_numbers_2d_1"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.draw_numbers_2d_1">[docs]</a>    <span class="k">def</span> <span class="nf">draw_numbers_2d_1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_files</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Puts number files on image.&quot;&quot;&quot;</span>
 
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">number_file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">number_files</span><span class="p">):</span>
@@ -156,7 +156,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/numbers_2d_1.png&quot;</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="SimplyAnimateMath.draw_numbers_2d_2"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.draw_numbers_2d_2">[docs]</a>    <span class="k">def</span> <span class="nf">draw_numbers_2d_2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_files</span><span class="p">):</span>
+<div class="viewcode-block" id="SimplyAnimateMath.draw_numbers_2d_2"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.draw_numbers_2d_2">[docs]</a>    <span class="k">def</span> <span class="nf">draw_numbers_2d_2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_files</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Puts number files on image.&quot;&quot;&quot;</span>
 
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">number_file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">number_files</span><span class="p">):</span>
@@ -172,7 +172,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/numbers_2d_2.png&quot;</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="SimplyAnimateMath.draw_numbers_2d_3"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.draw_numbers_2d_3">[docs]</a>    <span class="k">def</span> <span class="nf">draw_numbers_2d_3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_files</span><span class="p">):</span>
+<div class="viewcode-block" id="SimplyAnimateMath.draw_numbers_2d_3"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.draw_numbers_2d_3">[docs]</a>    <span class="k">def</span> <span class="nf">draw_numbers_2d_3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_files</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Puts number files on image.&quot;&quot;&quot;</span>
 
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">number_file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">number_files</span><span class="p">):</span>
@@ -188,7 +188,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/numbers_2d_3.png&quot;</span><span class="p">)</span>
 
 </div>
+<<<<<<< HEAD
 <div class="viewcode-block" id="SimplyAnimateMath.write_time_d1"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.write_time_d1">[docs]</a>    <span class="k">def</span> <span class="nf">write_time_d1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_string</span><span class="p">):</span>
+=======
+<div class="viewcode-block" id="SimplyAnimateMath.write_time_d1"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.write_time_d1">[docs]</a>    <span class="k">def</span> <span class="nf">write_time_d1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_string</span><span class="p">):</span>
+>>>>>>> docs
         <span class="sd">&quot;&quot;&quot;Writes time as a number.&quot;&quot;&quot;</span>
 
         <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="p">)</span>
@@ -198,7 +202,11 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/time_d1.png&quot;</span><span class="p">)</span>
 </div>
+<<<<<<< HEAD
 <div class="viewcode-block" id="SimplyAnimateMath.write_time_d3"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.write_time_d3">[docs]</a>    <span class="k">def</span> <span class="nf">write_time_d3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_string</span><span class="p">):</span>
+=======
+<div class="viewcode-block" id="SimplyAnimateMath.write_time_d3"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.write_time_d3">[docs]</a>    <span class="k">def</span> <span class="nf">write_time_d3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_string</span><span class="p">):</span>
+>>>>>>> docs
         <span class="sd">&quot;&quot;&quot;Writes time as a number.&quot;&quot;&quot;</span>
 
         <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="p">)</span>
@@ -209,7 +217,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/time_d3.png&quot;</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="SimplyAnimateMath.draw_operator"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.draw_operator">[docs]</a>    <span class="k">def</span> <span class="nf">draw_operator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operator_file</span><span class="p">):</span>
+<div class="viewcode-block" id="SimplyAnimateMath.draw_operator"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.draw_operator">[docs]</a>    <span class="k">def</span> <span class="nf">draw_operator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operator_file</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Draws operator on image.&quot;&quot;&quot;</span>
 
         <span class="n">photo_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">photos</span><span class="p">[</span><span class="n">operator_file</span><span class="p">]</span>
@@ -220,7 +228,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/operator.png&quot;</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="SimplyAnimateMath.draw_equal"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.draw_equal">[docs]</a>    <span class="k">def</span> <span class="nf">draw_equal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">equal_file</span><span class="p">):</span>
+<div class="viewcode-block" id="SimplyAnimateMath.draw_equal"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.draw_equal">[docs]</a>    <span class="k">def</span> <span class="nf">draw_equal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">equal_file</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Draws equals on image.&quot;&quot;&quot;</span>
 
         <span class="n">photo_dir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">photos</span><span class="p">[</span><span class="n">equal_file</span><span class="p">]</span>
@@ -231,7 +239,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">work_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">&quot;/tmp/equal.png&quot;</span><span class="p">)</span>
 
 </div>
+<<<<<<< HEAD
 <div class="viewcode-block" id="SimplyAnimateMath.animate_plane"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.animate_plane">[docs]</a>    <span class="k">def</span> <span class="nf">animate_plane</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d2_numbers</span><span class="p">,</span> <span class="n">short_name</span><span class="o">=</span><span class="s">&quot;test&quot;</span><span class="p">,</span> \
+=======
+<div class="viewcode-block" id="SimplyAnimateMath.animate_plane"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.animate_plane">[docs]</a>    <span class="k">def</span> <span class="nf">animate_plane</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d2_numbers</span><span class="p">,</span> <span class="n">short_name</span><span class="o">=</span><span class="s">&quot;test&quot;</span><span class="p">,</span> \
+>>>>>>> docs
             <span class="n">dir_name</span><span class="o">=</span><span class="s">&quot;Animations&quot;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Given 2D numbers triplets, shows plus, minus, times, and div animation.&quot;&quot;&quot;</span>
 
@@ -253,7 +265,11 @@
         <span class="k">print</span><span class="p">(</span><span class="s">&quot;gif done: {dn}/{sn}.gif&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dn</span><span class="o">=</span><span class="n">dir_name</span><span class="p">,</span> <span class="n">sn</span><span class="o">=</span><span class="n">short_name</span><span class="p">))</span>
 
 </div>
+<<<<<<< HEAD
 <div class="viewcode-block" id="SimplyAnimateMath.animate_plane_d1"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.animate_plane_d1">[docs]</a>    <span class="k">def</span> <span class="nf">animate_plane_d1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d2_numbers</span><span class="p">,</span> <span class="n">d1_number_numbers</span><span class="p">,</span> \
+=======
+<div class="viewcode-block" id="SimplyAnimateMath.animate_plane_d1"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.animate_plane_d1">[docs]</a>    <span class="k">def</span> <span class="nf">animate_plane_d1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d2_numbers</span><span class="p">,</span> <span class="n">d1_number_numbers</span><span class="p">,</span> \
+>>>>>>> docs
         <span class="n">short_name</span><span class="o">=</span><span class="s">&quot;test&quot;</span><span class="p">,</span> <span class="n">dir_name</span><span class="o">=</span><span class="s">&quot;Animations&quot;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Given a pair of 1D and 2D numbers, make plus, minus, times, and div animations.&quot;&quot;&quot;</span>
 
@@ -282,7 +298,11 @@
                     <span class="n">dn</span><span class="o">=</span><span class="n">dir_name</span><span class="p">,</span> <span class="n">sn</span><span class="o">=</span><span class="n">short_name</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="n">op_name</span><span class="p">))</span>
 
 </div>
+<<<<<<< HEAD
 <div class="viewcode-block" id="SimplyAnimateMath.animate_plane_d1_d3"><a class="viewcode-back" href="../index.html#simply_animate_math.SimplyAnimateMath.animate_plane_d1_d3">[docs]</a>    <span class="k">def</span> <span class="nf">animate_plane_d1_d3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d2_numbers</span><span class="p">,</span> <span class="n">d1_number_numbers</span><span class="p">,</span> \
+=======
+<div class="viewcode-block" id="SimplyAnimateMath.animate_plane_d1_d3"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.SimplyAnimateMath.animate_plane_d1_d3">[docs]</a>    <span class="k">def</span> <span class="nf">animate_plane_d1_d3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d2_numbers</span><span class="p">,</span> <span class="n">d1_number_numbers</span><span class="p">,</span> \
+>>>>>>> docs
         <span class="n">d3_number_numbers</span><span class="p">,</span> <span class="n">short_name</span><span class="o">=</span><span class="s">&quot;test&quot;</span><span class="p">,</span> <span class="n">dir_name</span><span class="o">=</span><span class="s">&quot;Animations&quot;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Given a pair of 1D and 2D numbers, make plus, minus, times, and div animations.&quot;&quot;&quot;</span>
 
@@ -315,7 +335,11 @@
             <span class="k">print</span><span class="p">(</span><span class="s">&quot;gif done: {dn}/{sn}_{on}.gif&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dn</span><span class="o">=</span><span class="n">dir_name</span><span class="p">,</span> <span class="n">sn</span><span class="o">=</span><span class="n">short_name</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="n">op_name</span><span class="p">))</span>
 
 </div></div>
+<<<<<<< HEAD
 <div class="viewcode-block" id="merge_2_gifs"><a class="viewcode-back" href="../index.html#simply_animate_math.merge_2_gifs">[docs]</a><span class="k">def</span> <span class="nf">merge_2_gifs</span><span class="p">(</span><span class="n">common_name</span><span class="p">,</span> <span class="n">constant</span><span class="p">,</span> <span class="n">operator_1</span><span class="p">,</span> <span class="n">operator_2</span><span class="p">,</span> <span class="n">dir_name</span><span class="o">=</span><span class="s">&quot;Animations&quot;</span><span class="p">):</span>
+=======
+<div class="viewcode-block" id="merge_2_gifs"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.merge_2_gifs">[docs]</a><span class="k">def</span> <span class="nf">merge_2_gifs</span><span class="p">(</span><span class="n">common_name</span><span class="p">,</span> <span class="n">constant</span><span class="p">,</span> <span class="n">operator_1</span><span class="p">,</span> <span class="n">operator_2</span><span class="p">,</span> <span class="n">dir_name</span><span class="o">=</span><span class="s">&quot;Animations&quot;</span><span class="p">):</span>
+>>>>>>> docs
     <span class="sd">&quot;&quot;&quot;Merge two animations animations.&quot;&quot;&quot;</span>
 
     <span class="n">file_1</span> <span class="o">=</span> <span class="s">&quot;{dn}/{cn}_{con}_{op_1}.gif&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>\
@@ -335,7 +359,11 @@
     <span class="k">print</span><span class="p">(</span><span class="s">&quot;merge done: {f_1_2}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f_1_2</span><span class="o">=</span><span class="n">file_1_2</span><span class="p">))</span>
 
 </div>
+<<<<<<< HEAD
 <div class="viewcode-block" id="merge_box_gifs"><a class="viewcode-back" href="../index.html#simply_animate_math.merge_box_gifs">[docs]</a><span class="k">def</span> <span class="nf">merge_box_gifs</span><span class="p">(</span><span class="n">common_name</span><span class="p">,</span> <span class="n">constant</span><span class="p">,</span> <span class="n">operator_1</span><span class="p">,</span> <span class="n">operator_2</span><span class="p">,</span> \
+=======
+<div class="viewcode-block" id="merge_box_gifs"><a class="viewcode-back" href="../simply_animate_math.html#simply_animate_math.merge_box_gifs">[docs]</a><span class="k">def</span> <span class="nf">merge_box_gifs</span><span class="p">(</span><span class="n">common_name</span><span class="p">,</span> <span class="n">constant</span><span class="p">,</span> <span class="n">operator_1</span><span class="p">,</span> <span class="n">operator_2</span><span class="p">,</span> \
+>>>>>>> docs
     <span class="n">dir_name</span><span class="o">=</span><span class="s">&quot;Animations&quot;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Merge two animations animations.&quot;&quot;&quot;</span>
 
