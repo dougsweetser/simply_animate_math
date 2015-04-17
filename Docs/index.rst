@@ -1,35 +1,27 @@
-.. Simply Animate Math documentation master file, created by
-   sphinx-quickstart on Mon Mar  9 11:13:35 2015.
+.. simply_animate_math documentation master file, created by
+   sphinx-quickstart on Thu Apr 16 19:26:31 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Simply Animate Math's documentation!
+Welcome to simply_animate_math's documentation!
 ===============================================
+
+A bit of code to glue together images and make an animated gif about space-time math. An abstract approach to this problem has yet to be figured out. An example of the output is shown below:
+
+.. image:: images/dynamic_d3_m_plus.gif
+
+The results of the program are in the Animations directory.
 
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
-.. autoprogram:: simply_animate_math:PARSER
-    :prog: simply_animate_math.py
-.. automodule:: simply_animate_math
-    :members:
-
-.. autoprogram:: photos:PARSER
-    :prog: photos.py
-.. automodule:: photos
-    :members:
-
-config.py
-=========
-.. automodule:: config
-    :members:
-
-template.py
-========
-.. automodule:: template
-    :members:
+   config
+   photos
+   simply_animate_math
+   template
+   README.rst
 
 Indices and tables
 ==================

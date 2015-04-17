@@ -60,7 +60,7 @@
 <span class="n">photo_type</span><span class="o">.</span><span class="n">operator</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.145</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.49</span><span class="p">)</span>
 <span class="n">photo_type</span><span class="o">.</span><span class="n">equal</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.145</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.77</span><span class="p">)</span>
 
-<div class="viewcode-block" id="thumb_info"><a class="viewcode-back" href="../template.html#template.thumb_info">[docs]</a><span class="k">def</span> <span class="nf">thumb_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">rescale</span><span class="p">):</span>
+<div class="viewcode-block" id="thumb_info"><a class="viewcode-back" href="../index.html#template.thumb_info">[docs]</a><span class="k">def</span> <span class="nf">thumb_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">rescale</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Calculate the size for a thumb_name, rescaling by height&quot;&quot;&quot;</span>
 
     <span class="n">new_height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">rescale</span> <span class="o">*</span> <span class="n">height</span><span class="p">)</span>
@@ -68,7 +68,7 @@
     <span class="k">return</span> <span class="p">(</span><span class="n">new_width</span><span class="p">,</span> <span class="n">new_height</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="box_info"><a class="viewcode-back" href="../template.html#template.box_info">[docs]</a><span class="k">def</span> <span class="nf">box_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">thumb_size</span><span class="p">,</span> <span class="n">x_scale</span><span class="p">,</span> <span class="n">y_scale</span><span class="p">):</span>
+<div class="viewcode-block" id="box_info"><a class="viewcode-back" href="../index.html#template.box_info">[docs]</a><span class="k">def</span> <span class="nf">box_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">thumb_size</span><span class="p">,</span> <span class="n">x_scale</span><span class="p">,</span> <span class="n">y_scale</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Calculate the box based on image, thumb_size, and shifts.&quot;&quot;&quot;</span>
 
     <span class="n">x_shift</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x_scale</span> <span class="o">*</span> <span class="n">width</span><span class="p">)</span>
@@ -76,7 +76,7 @@
     <span class="k">return</span> <span class="p">[</span><span class="n">x_shift</span><span class="p">,</span> <span class="n">y_shift</span><span class="p">,</span> <span class="n">x_shift</span> <span class="o">+</span> <span class="n">thumb_size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_shift</span> <span class="o">+</span> <span class="n">thumb_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
 
 </div>
-<div class="viewcode-block" id="thumb_box_info"><a class="viewcode-back" href="../template.html#template.thumb_box_info">[docs]</a><span class="k">def</span> <span class="nf">thumb_box_info</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">im_size</span><span class="p">):</span>
+<div class="viewcode-block" id="thumb_box_info"><a class="viewcode-back" href="../index.html#template.thumb_box_info">[docs]</a><span class="k">def</span> <span class="nf">thumb_box_info</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">im_size</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Numbers needed to rescale and place a photo.&quot;&quot;&quot;</span>
 
     <span class="n">thumb</span> <span class="o">=</span> <span class="n">thumb_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">photo_type</span><span class="p">[</span><span class="nb">type</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
@@ -84,7 +84,7 @@
     <span class="k">return</span> <span class="p">{</span><span class="s">&quot;thumb&quot;</span><span class="p">:</span><span class="n">thumb</span><span class="p">,</span> <span class="s">&quot;box&quot;</span><span class="p">:</span><span class="n">box</span><span class="p">}</span>
 
 </div>
-<div class="viewcode-block" id="number_info"><a class="viewcode-back" href="../template.html#template.number_info">[docs]</a><span class="k">def</span> <span class="nf">number_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+<div class="viewcode-block" id="number_info"><a class="viewcode-back" href="../index.html#template.number_info">[docs]</a><span class="k">def</span> <span class="nf">number_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Calculate the thumbnail dimensions and box location.&quot;&quot;&quot;</span>
 
     <span class="n">y_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.16666</span><span class="p">,</span> <span class="mf">0.44166</span><span class="p">,</span> <span class="mf">0.71666</span><span class="p">)</span>
@@ -92,7 +92,7 @@
     <span class="n">box</span> <span class="o">=</span> <span class="n">box_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">thumb</span><span class="p">,</span> <span class="mf">0.333</span><span class="p">,</span> <span class="n">y_scale</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
     <span class="k">return</span> <span class="p">{</span><span class="s">&quot;thumb&quot;</span><span class="p">:</span><span class="n">thumb</span><span class="p">,</span> <span class="s">&quot;box&quot;</span><span class="p">:</span><span class="n">box</span><span class="p">}</span>
 </div>
-<div class="viewcode-block" id="number_2d_1_info"><a class="viewcode-back" href="../template.html#template.number_2d_1_info">[docs]</a><span class="k">def</span> <span class="nf">number_2d_1_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+<div class="viewcode-block" id="number_2d_1_info"><a class="viewcode-back" href="../index.html#template.number_2d_1_info">[docs]</a><span class="k">def</span> <span class="nf">number_2d_1_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Calculate the thumbnail dimensions and box location.&quot;&quot;&quot;</span>
 
     <span class="n">y_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.16666</span><span class="p">,</span> <span class="mf">0.44166</span><span class="p">,</span> <span class="mf">0.71666</span><span class="p">)</span>
@@ -100,7 +100,7 @@
     <span class="n">box</span> <span class="o">=</span> <span class="n">box_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">thumb</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">,</span> <span class="n">y_scale</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
     <span class="k">return</span> <span class="p">{</span><span class="s">&quot;thumb&quot;</span><span class="p">:</span><span class="n">thumb</span><span class="p">,</span> <span class="s">&quot;box&quot;</span><span class="p">:</span><span class="n">box</span><span class="p">}</span>
 </div>
-<div class="viewcode-block" id="number_2d_2_info"><a class="viewcode-back" href="../template.html#template.number_2d_2_info">[docs]</a><span class="k">def</span> <span class="nf">number_2d_2_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+<div class="viewcode-block" id="number_2d_2_info"><a class="viewcode-back" href="../index.html#template.number_2d_2_info">[docs]</a><span class="k">def</span> <span class="nf">number_2d_2_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Calculate the thumbnail dimensions and box location.&quot;&quot;&quot;</span>
 
     <span class="n">new_i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span>
@@ -110,13 +110,13 @@
     <span class="k">return</span> <span class="p">{</span><span class="s">&quot;thumb&quot;</span><span class="p">:</span><span class="n">thumb</span><span class="p">,</span> <span class="s">&quot;box&quot;</span><span class="p">:</span><span class="n">box</span><span class="p">}</span>
 
 </div>
-<div class="viewcode-block" id="number_2d_3_info"><a class="viewcode-back" href="../template.html#template.number_2d_3_info">[docs]</a><span class="k">def</span> <span class="nf">number_2d_3_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+<div class="viewcode-block" id="number_2d_3_info"><a class="viewcode-back" href="../index.html#template.number_2d_3_info">[docs]</a><span class="k">def</span> <span class="nf">number_2d_3_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Calculate the thumbnail dimensions and box location.&quot;&quot;&quot;</span>
 
     <span class="n">new_i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span>
     <span class="n">y_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.16666</span><span class="p">,</span> <span class="mf">0.44166</span><span class="p">,</span> <span class="mf">0.71666</span><span class="p">)</span>
     <span class="n">thumb</span> <span class="o">=</span> <span class="n">thumb_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
-    <span class="n">box</span> <span class="o">=</span> <span class="n">box_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">thumb</span><span class="p">,</span> <span class="mf">0.71</span><span class="p">,</span> <span class="n">y_scale</span><span class="p">[</span><span class="n">new_i</span><span class="p">])</span>
+    <span class="n">box</span> <span class="o">=</span> <span class="n">box_info</span><span class="p">(</span><span class="n">im_size</span><span class="p">,</span> <span class="n">thumb</span><span class="p">,</span> <span class="mf">0.70</span><span class="p">,</span> <span class="n">y_scale</span><span class="p">[</span><span class="n">new_i</span><span class="p">])</span>
     <span class="k">return</span> <span class="p">{</span><span class="s">&quot;thumb&quot;</span><span class="p">:</span><span class="n">thumb</span><span class="p">,</span> <span class="s">&quot;box&quot;</span><span class="p">:</span><span class="n">box</span><span class="p">}</span>
 
 
@@ -144,10 +144,6 @@
 <span class="n">dynamic_3d</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s">&quot;#000000&quot;</span>
 <span class="n">dynamic_3d</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">dynamic_3d</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="n">dynamic_3d</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span> <span class="n">dynamic_3d</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">color</span><span class="p">,</span> <span class="n">dynamic_3d</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
-
-
-<span class="n">time_1d_pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">width</span> <span class="o">*</span> <span class="mf">0.63</span><span class="p">,</span> <span class="n">height</span> <span class="o">*</span> <span class="mf">0.945</span><span class="p">)</span>
-<span class="n">time_3d_pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">width</span> <span class="o">*</span> <span class="mf">0.805</span><span class="p">,</span> <span class="n">height</span> <span class="o">*</span> <span class="mf">0.945</span><span class="p">)</span>
 </pre></div>
 
           </div>

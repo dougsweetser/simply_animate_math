@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to simply_animate_math’s documentation! &mdash; Simply Animate Math 0.1 documentation</title>
+    <title>Notes &mdash; Simply Animate Math 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,8 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="Simply Animate Math 0.1 documentation" href="#" />
-    <link rel="next" title="config module" href="config.html" /> 
+    <link rel="top" title="Simply Animate Math 0.1 documentation" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,10 +36,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="config.html" title="config module"
-             accesskey="N">next</a> |</li>
-        <li><a href="#">Simply Animate Math 0.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">Simply Animate Math 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -49,29 +45,19 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="welcome-to-simply-animate-math-s-documentation">
-<h1>Welcome to simply_animate_math&#8217;s documentation!<a class="headerlink" href="#welcome-to-simply-animate-math-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>A bit of code to glue together images and make an animated gif about space-time math. An abstract approach to this problem has yet to be figured out. An example of the output is shown below:</p>
-<img alt="_images/dynamic_d3_m_plus.gif" src="_images/dynamic_d3_m_plus.gif" />
-<p>The results of the program are in the Animations directory.</p>
-<p>Contents:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="config.html">config module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="photos.html">photos module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simply_animate_math.html">simply_animate_math module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="template.html">template module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="README.html">Notes</a></li>
-</ul>
+  <div class="section" id="notes">
+<h1>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h1>
+<p>To make the original version:</p>
+<p>&gt; sphinx-api -F -o Docs simply_animate_math</p>
+<p>The conf.py needed a modification to fix finding the code:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">&#39;.&#39;</span><span class="p">))</span>
+<span class="n">parent</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="s">&#39;conf.py&#39;</span><span class="p">),</span> <span class="s">&quot;..&quot;</span><span class="p">))</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parent</span> <span class="o">+</span> <span class="s">&quot;/simply_animate_math&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
-</ul>
+<p>Then <em>make html</em> in the Docs directory does the trick.</p>
+<p>If any further programs are added, rerun the command with a <em>-f</em> for <em>-F</em></p>
 </div>
 
 
@@ -80,18 +66,9 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Welcome to simply_animate_math&#8217;s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
-
-  <h4>Next topic</h4>
-  <p class="topless"><a href="config.html"
-                        title="next chapter">config module</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/index.txt"
+    <li><a href="_sources/README.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -120,10 +97,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="config.html" title="config module"
-             >next</a> |</li>
-        <li><a href="#">Simply Animate Math 0.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">Simply Animate Math 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
