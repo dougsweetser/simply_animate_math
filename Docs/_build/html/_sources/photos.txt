@@ -1,7 +1,0 @@
-photos module
-=============
-
-.. automodule:: photos
-    :members:
-    :undoc-members:
-    :show-inheritance:
