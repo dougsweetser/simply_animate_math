@@ -1,0 +1,22 @@
+site_name: Space-time Math 101
+site_author: sweetser@alum.mit.edu
+copyright: 2015, Doug Sweetser, all rights reserved.
+pages:
+- [index.md, static, Static Math]
+- [static/plane_intro.md, static, Math in a plane]
+- [static/horizontal.md, static, Add horizontally]
+- [static/vertical.md, static, Add vertically]
+- [static/diagonal.md, static, Add diagonally]
+- [static/plane_summary.md, static, Complex numbers as the plane]
+# - [animated/animated.md, animated, Animated math]
+- [animated/time.md, animated, Move only in time]
+- [animated/space.md, animated, Big only briefly]
+- [animated/motion.md, animated, Constant motion]
+# - [space-time/space-time.md, space-time, Animated space-time]
+- [space-time/time.md, space-time, Move only in time]
+- [space-time/space.md, space-time, Big only briefly]
+- [space-time/motion.md, space-time, Constant motion]
+- [qft.md, Collider Math]
+- [documentation/docs.md, docs, How this was done]
+- [documentation/about.md, docs, About]
+theme_dir: spacelab-mod
