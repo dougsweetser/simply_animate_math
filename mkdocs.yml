@@ -8,7 +8,7 @@ pages:
 - [static/vertical.md, static, Add vertically]
 - [static/diagonal.md, static, Add diagonally]
 - [static/plane_summary.md, static, Complex numbers as the plane]
-# - [animated/animated.md, animated, Animated math]
+- [animated/animated.md, animated, Animated math]
 - [animated/time.md, animated, Move only in time]
 - [animated/space.md, animated, Big only briefly]
 - [animated/motion.md, animated, Constant motion]
