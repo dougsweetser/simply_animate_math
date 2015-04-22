@@ -6,13 +6,13 @@ I was born in Bronxville, New York, in 1962, but raised in a western suburb of M
 
 My first job was as a lab tech at the newly opened Whitehead Institute for Biomedical Research. On the first week on the job, Prof. Rick Young showed me how to clone the first genes ever from the Mycobacteria that causes leprosy.
 
-In the Christmas of 1988, both my mother and sister independently bought the book: "A Brief History of Time" by Stephen Hawking. I view that as my "born again" moment, one based on physics, not the Bible. For a month long period, my mind kept rearranging information, sure that everything somehow made sense. I was aware I was babbling - saying words that are part of the lexicon of phyiscs, but would not make sense to an actual physicsist. I decide to keep a day job, but work study physics in the background.
+In the Christmas of 1988, both my mother and sister independently bought the book: "A Brief History of Time" by Stephen Hawking. I view that as my "born again" moment, one based on physics, not the Bible. For a month long period, my mind kept rearranging information, sure that everything somehow made sense. I was aware I was babbling - saying words that are part of the lexicon of physics, but would not make sense to an actual physicists. I decide to keep a day job, but work study physics in the background.
 
 Boston was the perfect city in the 1990s to study physics on the side. I took a Harvard Extension class on Special Relativity taught by Edwin F. Taylor as he was writing the book "Spacetime Physics" with Johnathon Wheeler. Taylor would bring in a new chapter from Copy Copy, and we were assigned to critique it. Thus became my respectful skeptical analysis of physics. I decide to keep a day job, but work study physics in the background.
 
 I was able to show some of my earliest efforts to a famous physicist who worked at MIT.  He said it was "interesting, but not very interesting". The reason was I did not have a _theory_, a means to make many calculations. At the time, all I had were a few math widgets.
 
-In the struggle to find a theory, I held a small contest on a moderated newsgroup, sci.physics.research in 1997.  I asked readers to provide a brief definition of time.  It had to be about math or physics, not philosophy, and needed to be two sentecnes or less. In one math book, I recalled some odd sort of number that was like a scalar and a vector. The contest motivated me to reread that passage, then go to an old-fashion library and read up about _quaternions_. This was the first equation I saw, the squaring of a quaternion:
+In the struggle to find a theory, I held a small contest on a moderated newsgroup, sci.physics.research in 1997.  I asked readers to provide a brief definition of time.  It had to be about math or physics, not philosophy, and needed to be two sentences or less. In one math book, I recalled some odd sort of number that was like a scalar and a vector. The contest motivated me to reread that passage, then go to an old-fashion library and read up about _quaternions_. This was the first equation I saw, the squaring of a quaternion:
 
 ![](http://mathurl.com/q2c4k68.png)
 

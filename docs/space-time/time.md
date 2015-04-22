@@ -1,4 +1,4 @@
-# Spacetime Math: Stay still, get old
+# Space-time Math: Stay still, get old
 
 ![](../img/dynamic_d3_t_plus_240.gif)
 ![](../img/dynamic_d3_t_minus_240.gif)

@@ -6,4 +6,4 @@ Time remains time.
 
 Space can now be space.
 
-This is the domian of space-time math.
+This is the domain of space-time math.

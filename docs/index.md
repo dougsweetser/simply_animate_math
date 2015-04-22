@@ -1,7 +1,7 @@
 # Static Math
 
 
-![Addition, subtraction, multiplication, and dividion](img/pure_300.gif)
+![Addition, subtraction, multiplication, and division](img/pure_300.gif)
 
 Static math looks like how you remember it from third grade.
 

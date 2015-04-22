@@ -8,6 +8,6 @@ That requires blocks and straws. The blocks were in the house. The huge number o
 
 The photos were taking using a Nexus 5 cell phone mounted on a monopod kept in place with a Black & Decker workbench.
 
-Software was written in python to merge the photos together. The project, [simply_animate_math](https://github.com/dougsweetser/simply_animate_math), is publically available on github.
+Software was written in python to merge the photos together. The project, [simply_animate_math](https://github.com/dougsweetser/simply_animate_math), is publicly available on github.
 
 This site was generated using **mkdocs**, a great program for a simple static site like this one.

@@ -7,4 +7,4 @@
 
 Adding space make things bigger.
 
-Multipying needs to double real time to double the size.
+Multiplying needs to double real time to double the size.
