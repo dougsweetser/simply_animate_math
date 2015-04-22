@@ -19,6 +19,11 @@ pages:
 - [space-time/motion.md, space-time, Constant motion]
 - [space-time/space_time_animations.md, space-time, Space-time animations]
 - [qft.md, Collider Math]
-- [documentation/docs.md, docs, How this was done]
-- [documentation/about.md, docs, About]
+- [about/summary.md, about, Summary]
+- [about/technical_summary.md, about, Technical summary]
+- [about/how_done.md, about, How this was done]
+- [about/professional.md, about, Professional Sketch]
+- [about/personal.md, about, Personal Sketch]
+- [about/contact.md, about, Contact]
+- [about/tip_jar.md, about, Tip jar]
 theme_dir: spacelab-mod
