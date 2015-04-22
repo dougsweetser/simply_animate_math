@@ -6,4 +6,4 @@ Time remains time.
 
 Space can now be space.
 
-This is the domian of space-time physics.
+This is the domian of space-time math.

@@ -6,6 +6,6 @@ Time remains a real number.
 
 There are now three imaginary numbers for space.
 
-All together this is space-time physics.
+All together this is space-time math.
 
 The math is known as quaternions.
