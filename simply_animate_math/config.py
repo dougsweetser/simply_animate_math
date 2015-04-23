@@ -39,8 +39,8 @@ d2rt2, d2rt3, d2rt6 = "N1n1_2n2.jpg", "N1n1_2n2_3n3.jpg", "N1n1_2n2_3n3_4n4_5n5_
 
 equal = "equal.jpg"
 
-width = 600
-height = 600
+width = 300
+height = 300
 
 f6_1 = [d1r1, d10, d10, d10, d10, d10]
 f6_12 = [d1r1, d1r1, d10, d10, d10, d10]
@@ -132,4 +132,4 @@ d3.m.numbers = (d3.m.plus, d3.m.minus, d3.m.times, d3.m.div)
 # Font stuff.
 FM = matplotlib.font_manager.FontManager()
 font = FM.findfont(r'Times New Roman')
-font_size = 32
+font_size = int( 32 * height / 600)

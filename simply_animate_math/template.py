@@ -95,6 +95,7 @@ dynamic_3d.line.color = "#000000"
 dynamic_3d.line.width = 4
 dynamic_3d.line.values = (dynamic_3d.line.pos, dynamic_3d.line.color, dynamic_3d.line.width)
 
-
-time_1d_pos = (width * 0.63, height * 0.945)
-time_3d_pos = (width * 0.805, height * 0.945)
+time_pos = Bunch()
+time_pos.top = [width * 0.68, height * 0.35]
+time_pos.middle = [width * 0.68, height * 0.625]
+time_pos.bottom = [width * 0.68, height * 0.90]
