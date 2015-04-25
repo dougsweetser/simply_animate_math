@@ -1,4 +1,4 @@
-# Space-time Math 101 Summary
+# Space-time numbers 101 summary
 
 Only three numbers were used in this exercise: 2, 3, and 6.
 
