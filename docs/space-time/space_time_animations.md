@@ -1,4 +1,4 @@
-# Space-time Animations
+# Space-time numbers as animations
 
 ![](../img/space_time_animation.gif)
 

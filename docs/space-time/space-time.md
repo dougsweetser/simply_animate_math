@@ -1,4 +1,4 @@
-# Space-time Math
+# Space-time numbers
 
 ![](../img/dynamic_d3_simple.gif)
 

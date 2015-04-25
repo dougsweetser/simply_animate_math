@@ -1,4 +1,4 @@
-# Space-time Math: Constant Motion
+# Space-time numbers: constant motion
 
 ![](../img/dynamic_d3_m_plus_240.gif)
 ![](../img/dynamic_d3_m_minus_240.gif)
