@@ -11,6 +11,7 @@
                 <span class="icon-bar"></span>
             </button>
 
+                <div class="navbar-toggle">
                 {% if not previous_page %}class="disabled"{% endif %}
                     <a rel="next" {% if previous_page %}href="{{ previous_page.url }}"{% endif %}>
                         <i class="fa fa-arrow-left"></i> 
@@ -19,6 +20,7 @@
                     <a rel="prev" {% if next_page %}href="{{ next_page.url }}"{% endif %}>
                         <i class="fa fa-arrow-right"></i>
                     </a>
+                </div>
 
             <!-- Main title -->
             <a class="navbar-brand" href="{{ homepage_url }}">{{ site_name }}</a>
