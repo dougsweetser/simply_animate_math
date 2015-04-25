@@ -1,4 +1,4 @@
-# Doing math in the plane
+# Static numbers in a plane as complex numbers
 
 ![](../img/plane_t_detail_complex.png)
 

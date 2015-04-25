@@ -1,4 +1,4 @@
-# Static Plane Math: Horizontal
+# Static numbers in a plane that are horizontal
 
 ![](../img/plane_t_300.gif)
 

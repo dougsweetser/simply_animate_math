@@ -1,4 +1,4 @@
-# Static Plane Math: Diagonal
+# Static numbers in a plane along a diagonal
 
 ![](../img/plane_m_300.gif)
 

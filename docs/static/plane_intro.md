@@ -1,4 +1,4 @@
-# Math in the plane
+# Static numbers in a plane
 
 ![](../img/plane_t_detail_simple.png)
 
