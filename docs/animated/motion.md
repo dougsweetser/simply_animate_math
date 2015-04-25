@@ -1,4 +1,4 @@
-# Animated math: constant motion
+# Animated numbers: constant motion
 
 ![](../img/dynamic_d1_m_plus_240.gif)
 ![](../img/dynamic_d1_m_minus_240.gif) 

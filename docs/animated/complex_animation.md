@@ -1,4 +1,4 @@
-# Complex Animation
+# Animated numbers as complex numbers
 
 ![](../img/dynamic_t_complex.gif)
 

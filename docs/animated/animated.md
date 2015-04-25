@@ -1,4 +1,4 @@
-# Animated math: Looking at the plane
+# Animated numbers
 
 ![](../img/dynamic_t_simple.gif)
 

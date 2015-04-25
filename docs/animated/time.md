@@ -1,4 +1,4 @@
-# Animated math: Move only in time
+# Animated numbers: move only in time
 
 ![](../img/dynamic_d1_t_plus_240.gif) 
 ![](../img/dynamic_d1_t_minus_240.gif)
