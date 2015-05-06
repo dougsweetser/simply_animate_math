@@ -12,11 +12,11 @@
             </button>
 
                 <div class="navbar-toggle">
-                {% if not previous_page %}class="disabled"{% endif %}
+                {% if not previous_page %}{% endif %}
                     <a rel="next" {% if previous_page %}href="{{ previous_page.url }}"{% endif %}>
                         <i class="fa fa-arrow-left"></i> 
                     </a> Prev, Next
-                {% if not next_page %}class="disabled"{% endif %}
+                {% if not next_page %}{% endif %}
                     <a rel="prev" {% if next_page %}href="{{ next_page.url }}"{% endif %}>
                         <i class="fa fa-arrow-right"></i>
                     </a>
