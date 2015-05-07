@@ -1,8 +1,8 @@
 # Super Collider Math
 
-<a id="single_1" href="../../img/qft_600.gif"
+<a id="single_1" href="../img/qft_600.gif"
 title="relativistic quantum field theory numbers">
-    <img src="../../img/qft_300.gif" alt="" /></a>
+    <img src="../img/qft_300.gif" alt="" /></a>
 
 It all happens **so fast** that all the numbers look the same.
 
