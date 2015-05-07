@@ -223,7 +223,13 @@
 
 <h1 id="animated-numbers">Animated numbers</h1>
 <p><img alt="" src="../../img/dynamic_t_simple.gif" /></p>
-<p>Animated numbers have two qualities:</p>
+<p><a id="single_1" href="../../img/plane_t_600.gif"
+title="horizontal numbers">
+    <img src="../../img/plane_t_300.gif" alt="" />  </a></p>
+<p><img src="../../img/plane_t_300.gif" alt="" />
+<img src="../img/plane_t_300.gif" alt="" />
+<img src="img/plane_t_300.gif" alt="" />
+Animated numbers have two qualities:</p>
 <ol>
 <li>How long they last</li>
 <li>Where they are</li>
@@ -246,5 +252,23 @@ are <a href="../../about/technical_summary/#equations">also discussed</a>.</p></
         <script src="../../fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
         <script src="../../fancybox/source/helpers/jquery.fancybox-media.js"></script>
         <script src="../../fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".fancybox").fancybox();
+                    });
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#single_1").fancybox({
+                    helpers: {
+                        title : {
+                            type : 'float'
+                        }
+                    }
+                });
+        </script>
+        
     </body>
 </html>

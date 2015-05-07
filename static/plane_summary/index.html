@@ -243,5 +243,23 @@ Real numbers let the imaginary numbers keep going along.</p>
         <script src="../../fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
         <script src="../../fancybox/source/helpers/jquery.fancybox-media.js"></script>
         <script src="../../fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".fancybox").fancybox();
+                    });
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#single_1").fancybox({
+                    helpers: {
+                        title : {
+                            type : 'float'
+                        }
+                    }
+                });
+        </script>
+        
     </body>
 </html>
