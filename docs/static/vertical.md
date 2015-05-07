@@ -1,6 +1,7 @@
 # Static numbers in a plane that are vertical
 
-![](../img/plane_r_300.gif)
+<a id="single_1" title="static numbers, vertical" href="../../img/plane_r_600.gif">
+    <img src="../../img/plane_r_300.gif" alt="" /></a> 
 
 Addition and subtraction are simple.
 

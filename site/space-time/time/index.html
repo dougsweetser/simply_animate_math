@@ -197,19 +197,6 @@
                 </li>
             
             
-            
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Space time <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    
-                        <li >
-                            <a href="../space-time_numbers_vs_quaternions/">Space time numbers vs quaternions</a>
-                        </li>
-                    
-                    </ul>
-                </li>
-            
-            
             </ul>
 
             <!-- Search, Navigation and Repo links -->
@@ -235,10 +222,26 @@
             <div class="col-md-12" role="main">
 
 <h1 id="space-time-numbers-stay-still-get-old">Space-time numbers: stay still, get old</h1>
-<p><img alt="" src="../../img/dynamic_d3_t_plus_240.gif" />
-<img alt="" src="../../img/dynamic_d3_t_minus_240.gif" />
-<img alt="" src="../../img/dynamic_d3_t_times_240.gif" />
-<img alt="" src="../../img/dynamic_d3_t_div_240.gif" /></p>
+<p><a class="fancybox-button" rel="fancybox-button"
+href="../../img/dynamic_d3_t_plus_600.gif"
+title="space-time numbers in time, plus">
+    <img src="../../img/dynamic_d3_t_plus_240.gif" alt="" />
+</a>
+<a class="fancybox-button" rel="fancybox-button"
+href="../../img/dynamic_d3_t_minus_600.gif"
+title="space-time numbers in time, minus">
+    <img src="../../img/dynamic_d3_t_minus_240.gif" alt="" />
+</a>
+<a class="fancybox-button" rel="fancybox-button"
+href="../../img/dynamic_d3_t_times_600.gif" 
+title="space-time numbers in time, multiplication">
+    <img src="../../img/dynamic_d3_t_times_240.gif" alt="" />
+</a>
+<a class="fancybox-button" rel="fancybox-button"
+href="../../img/dynamic_d3_t_div_600.gif" 
+title="space-time numbers in time, division">
+    <img src="../../img/dynamic_d3_t_div_240.gif" alt="" />
+</a></p>
 <p>Adding time makes anything age.</p>
 <p>The location could really be anywhere in the cube.</p></div>
         </div>
@@ -254,5 +257,68 @@
         <script src="../../fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
         <script src="../../fancybox/source/helpers/jquery.fancybox-media.js"></script>
         <script src="../../fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".fancybox").fancybox();
+                    });
+        </script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                $("#single_1").fancybox({
+                    helpers: {
+                        title : {
+                            type : 'float'
+                        }
+                    }
+                });
+
+                $("#single_2").fancybox({
+                    openEffect  : 'elastic',
+                    closeEffect : 'elastic',
+
+                    helpers : {
+                        title : {
+                            type : 'inside'
+                        }
+                    }
+                });
+
+                $("#single_3").fancybox({
+                    openEffect : 'none',
+                    closeEffect : 'none',
+                    helpers : {
+                        title : {
+                            type : 'outside'
+                        }
+                    }
+                });
+
+                $("#single_4").fancybox({
+                    helpers : {
+                        title : {
+                            type : 'over'
+                        }
+                    }
+                });
+            });
+
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $(".fancybox-button").fancybox({
+                    prevEffect      : 'none',
+                    nextEffect      : 'none',
+                    closeBtn        : false,
+                    helpers     : {
+                        title   : { type : 'inside' },
+                        buttons : {}
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

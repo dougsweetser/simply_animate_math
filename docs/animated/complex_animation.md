@@ -1,6 +1,8 @@
 # Animated numbers as complex numbers
 
-![](../img/dynamic_t_complex.gif)
+<a id="single_1" href="../../img/dynamic_d1_detail_complex_600.gif"
+title="animated numbers as complex animation">
+    <img src="../../img/dynamic_d1_detail_complex_300.gif" alt="" /></a>
 
 Complex animations have the same information as the complex plane.
 

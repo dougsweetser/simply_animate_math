@@ -1,6 +1,8 @@
 # Space-time numbers as animations
 
-![](../img/space_time_animation.gif)
+<a id="single_1" href="../../img/dynamic_d1_detail_complex_600.gif"
+title="animated numbers">
+    <img src="../../img/dynamic_d1_detail_complex_300.gif" alt="" /></a>
 
 Time remains a real number.
 

@@ -1,6 +1,8 @@
 # Space-time numbers
 
-![](../img/dynamic_d3_simple.gif)
+<a id="single_1" href="../../img/dynamic_d3_detail_simple_600.gif"
+title="space-time numbers">
+    <img src="../../img/dynamic_d3_detail_simple_300.gif" alt="" /></a>
 
 Time remains time.
 

@@ -1,6 +1,8 @@
 # Static numbers in a plane along a diagonal
 
-![](../img/plane_m_300.gif)
+<a id="single_1" href="../../img/plane_m_600.gif"
+title="static numbers, diagonal">
+    <img src="../../img/plane_m_300.gif" alt="" /></a>
 
 Run along the diagonal.
 
