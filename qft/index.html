@@ -222,9 +222,14 @@
             <div class="col-md-12" role="main">
 
 <h1 id="super-collider-math">Super Collider Math</h1>
-<p><img alt="" src="../img/qft_300.gif" /></p>
+<p><a id="single_1" href="../../img/qft_600.gif"
+title="relativistic quantum field theory numbers">
+    <img src="../../img/qft_300.gif" alt="" /></a></p>
 <p>It all happens <strong>so fast</strong> that all the numbers look the same.</p>
-<p>With no difference between addition, subtraction, multiplication, and division, physicists have to take into account all possible possibilities.</p>
+<p>Some might say they can see differences between these, but that was only 
+because I was trying to help you :-)</p>
+<p>With no difference between addition, subtraction, multiplication, and division, 
+physicists have to take into account all possible possibilities.</p>
 <p>This sounds hard to do because it is.</p></div>
         </div>
 
@@ -247,6 +252,7 @@
         </script>
 
         <script type="text/javascript">
+
             $(document).ready(function() {
                 $("#single_1").fancybox({
                     helpers: {
@@ -255,7 +261,51 @@
                         }
                     }
                 });
+
+                $("#single_2").fancybox({
+                    openEffect  : 'elastic',
+                    closeEffect : 'elastic',
+
+                    helpers : {
+                        title : {
+                            type : 'inside'
+                        }
+                    }
+                });
+
+                $("#single_3").fancybox({
+                    openEffect : 'none',
+                    closeEffect : 'none',
+                    helpers : {
+                        title : {
+                            type : 'outside'
+                        }
+                    }
+                });
+
+                $("#single_4").fancybox({
+                    helpers : {
+                        title : {
+                            type : 'over'
+                        }
+                    }
+                });
+            });
+
         </script>
-        
+
+        <script>
+            $(document).ready(function() {
+                $(".fancybox-button").fancybox({
+                    prevEffect      : 'none',
+                    nextEffect      : 'none',
+                    closeBtn        : false,
+                    helpers     : {
+                        title   : { type : 'inside' },
+                        buttons : {}
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

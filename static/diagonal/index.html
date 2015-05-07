@@ -222,7 +222,9 @@
             <div class="col-md-12" role="main">
 
 <h1 id="static-numbers-in-a-plane-along-a-diagonal">Static numbers in a plane along a diagonal</h1>
-<p><img alt="" src="../../img/plane_m_300.gif" /></p>
+<p><a id="single_1" href="../../img/plane_m_600.gif"
+title="static numbers, diagonal">
+    <img src="../../img/plane_m_300.gif" alt="" /></a></p>
 <p>Run along the diagonal.</p>
 <p>For multiplication and division, they need the horizontal numbers to keep going the same way.</p></div>
         </div>
@@ -246,6 +248,7 @@
         </script>
 
         <script type="text/javascript">
+
             $(document).ready(function() {
                 $("#single_1").fancybox({
                     helpers: {
@@ -254,7 +257,51 @@
                         }
                     }
                 });
+
+                $("#single_2").fancybox({
+                    openEffect  : 'elastic',
+                    closeEffect : 'elastic',
+
+                    helpers : {
+                        title : {
+                            type : 'inside'
+                        }
+                    }
+                });
+
+                $("#single_3").fancybox({
+                    openEffect : 'none',
+                    closeEffect : 'none',
+                    helpers : {
+                        title : {
+                            type : 'outside'
+                        }
+                    }
+                });
+
+                $("#single_4").fancybox({
+                    helpers : {
+                        title : {
+                            type : 'over'
+                        }
+                    }
+                });
+            });
+
         </script>
-        
+
+        <script>
+            $(document).ready(function() {
+                $(".fancybox-button").fancybox({
+                    prevEffect      : 'none',
+                    nextEffect      : 'none',
+                    closeBtn        : false,
+                    helpers     : {
+                        title   : { type : 'inside' },
+                        buttons : {}
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

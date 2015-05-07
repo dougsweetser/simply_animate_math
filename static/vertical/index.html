@@ -222,7 +222,8 @@
             <div class="col-md-12" role="main">
 
 <h1 id="static-numbers-in-a-plane-that-are-vertical">Static numbers in a plane that are vertical</h1>
-<p><img alt="" src="../../img/plane_r_300.gif" /></p>
+<p><a id="single_1" title="static numbers, vertical" href="../../img/plane_r_600.gif">
+    <img src="../../img/plane_r_300.gif" alt="" /></a> </p>
 <p>Addition and subtraction are simple.</p>
 <p>For multiplication and division, the vertical numbers rotate the horizontal numbers to "be like them".</p>
 <p>The rotation is required so that from any point in the plane, one can travel to any other point in the plane by multiplying or dividing by the right number.</p>
@@ -248,6 +249,7 @@
         </script>
 
         <script type="text/javascript">
+
             $(document).ready(function() {
                 $("#single_1").fancybox({
                     helpers: {
@@ -256,7 +258,51 @@
                         }
                     }
                 });
+
+                $("#single_2").fancybox({
+                    openEffect  : 'elastic',
+                    closeEffect : 'elastic',
+
+                    helpers : {
+                        title : {
+                            type : 'inside'
+                        }
+                    }
+                });
+
+                $("#single_3").fancybox({
+                    openEffect : 'none',
+                    closeEffect : 'none',
+                    helpers : {
+                        title : {
+                            type : 'outside'
+                        }
+                    }
+                });
+
+                $("#single_4").fancybox({
+                    helpers : {
+                        title : {
+                            type : 'over'
+                        }
+                    }
+                });
+            });
+
         </script>
-        
+
+        <script>
+            $(document).ready(function() {
+                $(".fancybox-button").fancybox({
+                    prevEffect      : 'none',
+                    nextEffect      : 'none',
+                    closeBtn        : false,
+                    helpers     : {
+                        title   : { type : 'inside' },
+                        buttons : {}
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

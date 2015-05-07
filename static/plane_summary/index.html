@@ -222,7 +222,9 @@
             <div class="col-md-12" role="main">
 
 <h1 id="static-numbers-in-a-plane-as-complex-numbers">Static numbers in a plane as complex numbers</h1>
-<p><img alt="" src="../../img/plane_t_detail_complex.png" /></p>
+<p><a id="single_1" href="../../img/plane_t_detail_complex_600.png" title="static 
+numbers as a complex plane">
+<img src="../../img/plane_t_detail_complex_300.png" alt="" /></a> </p>
 <p>The real numbers are horizontal, never surprising.</p>
 <p>The imaginary number rotate real numbers to be like them.
 OR
@@ -251,6 +253,7 @@ Real numbers let the imaginary numbers keep going along.</p>
         </script>
 
         <script type="text/javascript">
+
             $(document).ready(function() {
                 $("#single_1").fancybox({
                     helpers: {
@@ -259,7 +262,51 @@ Real numbers let the imaginary numbers keep going along.</p>
                         }
                     }
                 });
+
+                $("#single_2").fancybox({
+                    openEffect  : 'elastic',
+                    closeEffect : 'elastic',
+
+                    helpers : {
+                        title : {
+                            type : 'inside'
+                        }
+                    }
+                });
+
+                $("#single_3").fancybox({
+                    openEffect : 'none',
+                    closeEffect : 'none',
+                    helpers : {
+                        title : {
+                            type : 'outside'
+                        }
+                    }
+                });
+
+                $("#single_4").fancybox({
+                    helpers : {
+                        title : {
+                            type : 'over'
+                        }
+                    }
+                });
+            });
+
         </script>
-        
+
+        <script>
+            $(document).ready(function() {
+                $(".fancybox-button").fancybox({
+                    prevEffect      : 'none',
+                    nextEffect      : 'none',
+                    closeBtn        : false,
+                    helpers     : {
+                        title   : { type : 'inside' },
+                        buttons : {}
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
