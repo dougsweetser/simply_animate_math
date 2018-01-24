@@ -1,0 +1,314 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Static Math\n\n\n\n\n\n\nclick to enlarge\n\n\nStatic math looks like how you remember it from third grade.\n\n\nOne should always be able to add, subtract, multiply and divide.\n\n\nAlways.\n\n\nSo simple.",
+            "title": ""
+        },
+        {
+            "location": "/#static-math",
+            "text": "click to enlarge  Static math looks like how you remember it from third grade.  One should always be able to add, subtract, multiply and divide.  Always.  So simple.",
+            "title": "Static Math"
+        },
+        {
+            "location": "/static/plane_intro/",
+            "text": "Static numbers in a plane\n\n\n\n    \n \n\n\nAdding makes things bigger.\n\n\nLike 3rd grade math with a grid for a backdrop.",
+            "title": "Static numbers in a plane"
+        },
+        {
+            "location": "/static/plane_intro/#static-numbers-in-a-plane",
+            "text": "Adding makes things bigger.  Like 3rd grade math with a grid for a backdrop.",
+            "title": "Static numbers in a plane"
+        },
+        {
+            "location": "/static/horizontal/",
+            "text": "Static numbers in a plane that are horizontal\n\n\n\n    \n\n\nSee all four operations: add, subtract, multiply, and divide.\n\n\nNo surprises.",
+            "title": "Add horizontally"
+        },
+        {
+            "location": "/static/horizontal/#static-numbers-in-a-plane-that-are-horizontal",
+            "text": "See all four operations: add, subtract, multiply, and divide.  No surprises.",
+            "title": "Static numbers in a plane that are horizontal"
+        },
+        {
+            "location": "/static/vertical/",
+            "text": "Static numbers in a plane that are vertical\n\n\n\n    \n \n\n\nAddition and subtraction are simple.\n\n\nFor multiplication and division, the vertical numbers rotate the horizontal numbers to \"be like them\".\n\n\nThe rotation is required so that from any point in the plane, one can travel to any other point in the plane by multiplying or dividing by the right number.\n\n\nWith no rotation, one would be stuck to keep going the same way.",
+            "title": "Add vertically"
+        },
+        {
+            "location": "/static/vertical/#static-numbers-in-a-plane-that-are-vertical",
+            "text": "Addition and subtraction are simple.  For multiplication and division, the vertical numbers rotate the horizontal numbers to \"be like them\".  The rotation is required so that from any point in the plane, one can travel to any other point in the plane by multiplying or dividing by the right number.  With no rotation, one would be stuck to keep going the same way.",
+            "title": "Static numbers in a plane that are vertical"
+        },
+        {
+            "location": "/static/diagonal/",
+            "text": "Static numbers in a plane along a diagonal\n\n\n\n    \n\n\nRun along the diagonal.\n\n\nFor multiplication and division, they need the horizontal numbers to keep going the same way.",
+            "title": "Add diagonally"
+        },
+        {
+            "location": "/static/diagonal/#static-numbers-in-a-plane-along-a-diagonal",
+            "text": "Run along the diagonal.  For multiplication and division, they need the horizontal numbers to keep going the same way.",
+            "title": "Static numbers in a plane along a diagonal"
+        },
+        {
+            "location": "/static/plane_summary/",
+            "text": "Static numbers in a plane as complex numbers\n\n\n\n\n \n\n\nThe real numbers are horizontal, never surprising.\n\n\nThe imaginary number rotate real numbers to be like them.\nOR\nReal numbers let the imaginary numbers keep going along.\n\n\nReal times real = real\n\n\nImaginary times imaginary = -real because imaginaries rotate imaginaries.\n\n\nThe pair, (real, imaginary) make up the complex plane.",
+            "title": "Complex numbers as the plane"
+        },
+        {
+            "location": "/static/plane_summary/#static-numbers-in-a-plane-as-complex-numbers",
+            "text": "The real numbers are horizontal, never surprising.  The imaginary number rotate real numbers to be like them.\nOR\nReal numbers let the imaginary numbers keep going along.  Real times real = real  Imaginary times imaginary = -real because imaginaries rotate imaginaries.  The pair, (real, imaginary) make up the complex plane.",
+            "title": "Static numbers in a plane as complex numbers"
+        },
+        {
+            "location": "/animated/animated/",
+            "text": "Animated numbers\n\n\n\n    \n\n\nAnimated numbers have two qualities:\n\n\n\n\nHow long they last\n\n\nWhere they are\n\n\n\n\nAdding time makes things last longer.\n\n\nFor technical readers concerned with calling these animated numbers\ninstead of complex numbers, \nhere are some\nthoughts\n.  The simple equations used\nare \nalso discussed\n.",
+            "title": "Animated numbers"
+        },
+        {
+            "location": "/animated/animated/#animated-numbers",
+            "text": "Animated numbers have two qualities:   How long they last  Where they are   Adding time makes things last longer.  For technical readers concerned with calling these animated numbers\ninstead of complex numbers,  here are some\nthoughts .  The simple equations used\nare  also discussed .",
+            "title": "Animated numbers"
+        },
+        {
+            "location": "/animated/time/",
+            "text": "Animated numbers: move only in time\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\nReal number time ticks up to 6 (then repeats).\n\n\nImaginary number space sits in the same place.\n\n\nAdd time makes one older.",
+            "title": "Move only in time"
+        },
+        {
+            "location": "/animated/time/#animated-numbers-move-only-in-time",
+            "text": "Real number time ticks up to 6 (then repeats).  Imaginary number space sits in the same place.  Add time makes one older.",
+            "title": "Animated numbers: move only in time"
+        },
+        {
+            "location": "/animated/space/",
+            "text": "Animated numbers: big only briefly\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\nAdding in space make it big.\n\n\nBut there is only one moment in time.\n\n\nBlink and big is done.",
+            "title": "Big only briefly"
+        },
+        {
+            "location": "/animated/space/#animated-numbers-big-only-briefly",
+            "text": "Adding in space make it big.  But there is only one moment in time.  Blink and big is done.",
+            "title": "Animated numbers: big only briefly"
+        },
+        {
+            "location": "/animated/motion/",
+            "text": "Animated numbers: constant motion\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\nMotion is addition of time and space.\n\n\nDouble the path by multiplying by the real number time, a 2.\n\n\nMotion can be seen.",
+            "title": "Constant motion"
+        },
+        {
+            "location": "/animated/motion/#animated-numbers-constant-motion",
+            "text": "Motion is addition of time and space.  Double the path by multiplying by the real number time, a 2.  Motion can be seen.",
+            "title": "Animated numbers: constant motion"
+        },
+        {
+            "location": "/animated/complex_animation/",
+            "text": "Animated numbers as complex numbers\n\n\n\n    \n\n\nComplex animations have the same information as the complex plane.\n\n\nReal numbers are the frame of an animation.\n\n\nComplex numbers are the location in the frame.",
+            "title": "Complex numbers as animations"
+        },
+        {
+            "location": "/animated/complex_animation/#animated-numbers-as-complex-numbers",
+            "text": "Complex animations have the same information as the complex plane.  Real numbers are the frame of an animation.  Complex numbers are the location in the frame.",
+            "title": "Animated numbers as complex numbers"
+        },
+        {
+            "location": "/space-time/space-time/",
+            "text": "Space-time numbers\n\n\n\n    \n\n\nTime remains time.\n\n\nSpace can now be space.\n\n\nThis is the domain of space-time math.\n\n\nAny technical people concerned with using the label \nspace-time numbers\n\ninstead of \nquaternions\n should \nsee this \npage\n.",
+            "title": "Space-time numbers"
+        },
+        {
+            "location": "/space-time/space-time/#space-time-numbers",
+            "text": "Time remains time.  Space can now be space.  This is the domain of space-time math.  Any technical people concerned with using the label  space-time numbers \ninstead of  quaternions  should  see this \npage .",
+            "title": "Space-time numbers"
+        },
+        {
+            "location": "/space-time/time/",
+            "text": "Space-time numbers: stay still, get old\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\nAdding time makes anything age.\n\n\nThe location could really be anywhere in the cube.",
+            "title": "Move only in time"
+        },
+        {
+            "location": "/space-time/time/#space-time-numbers-stay-still-get-old",
+            "text": "Adding time makes anything age.  The location could really be anywhere in the cube.",
+            "title": "Space-time numbers: stay still, get old"
+        },
+        {
+            "location": "/space-time/space/",
+            "text": "Space-time numbers: big only briefly\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\nAdding space make things bigger.\n\n\nMultiplying needs to double real time to double the size.",
+            "title": "Big only briefly"
+        },
+        {
+            "location": "/space-time/space/#space-time-numbers-big-only-briefly",
+            "text": "Adding space make things bigger.  Multiplying needs to double real time to double the size.",
+            "title": "Space-time numbers: big only briefly"
+        },
+        {
+            "location": "/space-time/motion/",
+            "text": "Space-time numbers: constant motion\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\n\n    \n\n\n\n\nThese animations are about three numbers: 2, 3, and 6.\n\n\nThere are three views:\n\n\n\n\nA static plane\n\n\nAn animated line\n\n\nAn animated cube\n\n\n\n\nAddition, subtraction, multiplication, and division work in all cases.\n\n\nThis must be the law (but it isn't).",
+            "title": "Constant motion"
+        },
+        {
+            "location": "/space-time/motion/#space-time-numbers-constant-motion",
+            "text": "These animations are about three numbers: 2, 3, and 6.  There are three views:   A static plane  An animated line  An animated cube   Addition, subtraction, multiplication, and division work in all cases.  This must be the law (but it isn't).",
+            "title": "Space-time numbers: constant motion"
+        },
+        {
+            "location": "/space-time/space_time_animations/",
+            "text": "Space-time numbers as animations\n\n\n\n    \n\n\nTime remains a real number.\n\n\nThere are now three imaginary numbers for space.\n\n\nAll together this is space-time math.\n\n\nThe math is known as quaternions.",
+            "title": "Space-time numbers as animations"
+        },
+        {
+            "location": "/space-time/space_time_animations/#space-time-numbers-as-animations",
+            "text": "Time remains a real number.  There are now three imaginary numbers for space.  All together this is space-time math.  The math is known as quaternions.",
+            "title": "Space-time numbers as animations"
+        },
+        {
+            "location": "/qft/",
+            "text": "Super Collider Math\n\n\n\n    \n\n\nIt all happens \nso fast\n that all the numbers look the same.\n\n\nIt all happens \nso fast\n that all the operations look the same.\n\n\nSome might say they can see differences between these, but that was only \nbecause I was trying to help you :-)\n\n\nWith no difference between the numbers 2, 3, and 6, and no differences between \naddition, subtraction, multiplication, and division, physicists have to take \ninto account all possible possibilities.\n\n\nThis sounds hard to do because it is.",
+            "title": "Super Collider N"
+        },
+        {
+            "location": "/qft/#super-collider-math",
+            "text": "It all happens  so fast  that all the numbers look the same.  It all happens  so fast  that all the operations look the same.  Some might say they can see differences between these, but that was only \nbecause I was trying to help you :-)  With no difference between the numbers 2, 3, and 6, and no differences between \naddition, subtraction, multiplication, and division, physicists have to take \ninto account all possible possibilities.  This sounds hard to do because it is.",
+            "title": "Super Collider Math"
+        },
+        {
+            "location": "/about/summary/",
+            "text": "Space-time numbers 101 summary\n\n\nOnly three numbers were used in this exercise: 2, 3, and 6.\n\n\nOnly four familiar operations were done:\n\n\n\n\nAddition\n\n\nSubtraction\n\n\nMultiplication\n\n\nDivision\n\n\n\n\nThe results where of three types:\n\n\n\n\nGet older\n\n\nGet bigger\n\n\nor Move\n\n\n\n\nThese basic operations must be done perfectly right, like they are done by Nature herself.\n\n\nProfessional physicists use math tools that do not consider division to be essential. I view division as just a different relationship between the numbers 2, 3, and 6.\n\n\nDivision must work, always no exceptions, or I don't understand the numbers 2, 3, and 6.\n\n\n\nThis simple requirement is subversive. It would demand rewriting nearly every technical physics book in circulation.",
+            "title": "Summary"
+        },
+        {
+            "location": "/about/summary/#space-time-numbers-101-summary",
+            "text": "Only three numbers were used in this exercise: 2, 3, and 6.  Only four familiar operations were done:   Addition  Subtraction  Multiplication  Division   The results where of three types:   Get older  Get bigger  or Move   These basic operations must be done perfectly right, like they are done by Nature herself.  Professional physicists use math tools that do not consider division to be essential. I view division as just a different relationship between the numbers 2, 3, and 6.  Division must work, always no exceptions, or I don't understand the numbers 2, 3, and 6.  This simple requirement is subversive. It would demand rewriting nearly every technical physics book in circulation.",
+            "title": "Space-time numbers 101 summary"
+        },
+        {
+            "location": "/about/technical_summary/",
+            "text": "Technical Summary\n\n\n\n\nAnimated numbers versus complex numbers\n\n\nTechnically, there is \nzero difference\n between these two labels.\n\n\nComplex numbers have been understood as having the capacity to represent\nnumbers in the plane since the seventeen hundreds.  In such a context, the\ndifference between the real and imaginary numbers is an arbitrarily assigned\naxis.  Why the real axis involves expansion and contraction, while the\nimaginary one utilizes rotation in the plane is just the way it has to be.\n\n\nTime is commonly involved in systems that use complex numbers.  This is a\ncommon accident.  I believe that time, and all time-like measurements in\nphysics, map to the real numbers.  Time has a number of unique qualities.  Zero\ntime is now.  Negative time, the past, can only be remembered.  Positive time,\nthe future, can only be predicted.  Space and space-like quantities are not\nlike that.  Mirrors can be used to flip positions.\n\n\nAnimated numbers can only be faithfully represented using computers not books\nprinted on paper.  The future of animated numbers will be visually interesting.\n\n\n\n\nThe equations on the complex manifold\n\n\nThe same equation is used throughout these pages:\n\n\n3 + 3 = 6\n\n\nThis may strike some as wrong for the animated or complex numbers surely\ninvolve three different equations:\n\n\n\n\nTime: (3, 0) + (3, 0) = (6, 0)\n\n\nSpace: (0, 3) + (0, 3) = (0, 6)\n\n\nMotion: (3, 3) + (3, 3) = (6, 6)\n\n\n\n\nThose are the quations for the complex numbers over the manifold R\n2\n.\nFor this site however, I only work over the complex manifold C\n1\n.\nThe way to write pure real and pure imaginary number is then:\n\n\n\n\nReal: (z + z\n*\n )/2\n\n\nImaginary: (z - z\n*\n)/2\n\n\nDiagonal: z z\n*\n + z z\n*\n i\n\n\n\n\nThe equation stays the same, but the manifold changes. I considered the subject\nof manifolds beyond the reach of \"Numbers 101\".\n\n\nThe same pattern happened for the space-time numbers or quaternions.\n\n\nSpace-time numbers versus quaternions\n\n\nTechnically, there is \nzero difference\n between these two labels.\n\n\nQuaternions have a long, twisted history.  Even today, people can have strong \nopinions about quaternions.  The name in isolation of that history says \"quat\", \nfour.  Other than that, one needs to read up on the subject.\n\n\nSpace-time numbers, as a label, says a bit more.  It is not simply that there \nare four equal partners, but there are the familiar three dimensions of space \nin a tense marriage with scalar time.  Space has properties that are deeply \ndifferent from time, yet with space-time numbers, they never part.  The label \ncan tie directly into the real world by pointing to events there-then, the \n\"there\" being space while \"then\" is the time.\n\n\nFull disclosure: I own quaternions.com so the label quaternions is important to \nme.  I now use both words interchangeably.  Space-time numbers feels more like \na real world term.  Quaternions as a label feels more abstract.  I find it \nhelpful to have both terms in my efforts to understand the accounting system \nused by the Universe.\n\n\nSpace-time numbers as the new King\n\n\nMathematical Physics is written using tensor calculus often over the field of \ncomplex numbers.\n\n\nMy own effort is to replace all such work using quaternions, a division algebra \nborn to work with space-time.\n\n\nIt has been my experience that when someone in the literature has published \nthat real-valued quaternions could not be used for a certain problem, I was \nable to find an approach that worked. This happened for representing the \nLorentz group, for deriving the Maxwell equations, and now I have an invariance \nprinciple that may do the work of gravity.\n\n\nIn the future, I hope that an area of study will not be considered complete \nuntil the researchers can provide animations.\n\n\nThe source of probability in quantum mechanics\n\n\nOnce there is some probability in quantum mechanics, so much follows. The \nriddle is why there should be any? My idea is that in high energy physics, the \nnormal fundamental operations of math - addition, subtraction, multiplication, \nand division - become indistinguishable. There is either zero, the vacuum, or \nunity made up of all possible histories. The quaternion group Q8 describes the \nproperties of space-time numbers.\n\n\nIt is my belief that the standard model of physics will need to be torn down \nand reconstructed using only the normalized quaternion group. I don't know how \nto start such a quest, so it will remain a personal belief.",
+            "title": "Technical summary"
+        },
+        {
+            "location": "/about/technical_summary/#technical-summary",
+            "text": "",
+            "title": "Technical Summary"
+        },
+        {
+            "location": "/about/technical_summary/#animated-numbers-versus-complex-numbers",
+            "text": "Technically, there is  zero difference  between these two labels.  Complex numbers have been understood as having the capacity to represent\nnumbers in the plane since the seventeen hundreds.  In such a context, the\ndifference between the real and imaginary numbers is an arbitrarily assigned\naxis.  Why the real axis involves expansion and contraction, while the\nimaginary one utilizes rotation in the plane is just the way it has to be.  Time is commonly involved in systems that use complex numbers.  This is a\ncommon accident.  I believe that time, and all time-like measurements in\nphysics, map to the real numbers.  Time has a number of unique qualities.  Zero\ntime is now.  Negative time, the past, can only be remembered.  Positive time,\nthe future, can only be predicted.  Space and space-like quantities are not\nlike that.  Mirrors can be used to flip positions.  Animated numbers can only be faithfully represented using computers not books\nprinted on paper.  The future of animated numbers will be visually interesting.",
+            "title": "Animated numbers versus complex numbers"
+        },
+        {
+            "location": "/about/technical_summary/#the-equations-on-the-complex-manifold",
+            "text": "The same equation is used throughout these pages:  3 + 3 = 6  This may strike some as wrong for the animated or complex numbers surely\ninvolve three different equations:   Time: (3, 0) + (3, 0) = (6, 0)  Space: (0, 3) + (0, 3) = (0, 6)  Motion: (3, 3) + (3, 3) = (6, 6)   Those are the quations for the complex numbers over the manifold R 2 .\nFor this site however, I only work over the complex manifold C 1 .\nThe way to write pure real and pure imaginary number is then:   Real: (z + z *  )/2  Imaginary: (z - z * )/2  Diagonal: z z *  + z z *  i   The equation stays the same, but the manifold changes. I considered the subject\nof manifolds beyond the reach of \"Numbers 101\".  The same pattern happened for the space-time numbers or quaternions.",
+            "title": "The equations on the complex manifold"
+        },
+        {
+            "location": "/about/technical_summary/#space-time-numbers-as-the-new-king",
+            "text": "Mathematical Physics is written using tensor calculus often over the field of \ncomplex numbers.  My own effort is to replace all such work using quaternions, a division algebra \nborn to work with space-time.  It has been my experience that when someone in the literature has published \nthat real-valued quaternions could not be used for a certain problem, I was \nable to find an approach that worked. This happened for representing the \nLorentz group, for deriving the Maxwell equations, and now I have an invariance \nprinciple that may do the work of gravity.  In the future, I hope that an area of study will not be considered complete \nuntil the researchers can provide animations.",
+            "title": "Space-time numbers as the new King"
+        },
+        {
+            "location": "/about/technical_summary/#the-source-of-probability-in-quantum-mechanics",
+            "text": "Once there is some probability in quantum mechanics, so much follows. The \nriddle is why there should be any? My idea is that in high energy physics, the \nnormal fundamental operations of math - addition, subtraction, multiplication, \nand division - become indistinguishable. There is either zero, the vacuum, or \nunity made up of all possible histories. The quaternion group Q8 describes the \nproperties of space-time numbers.  It is my belief that the standard model of physics will need to be torn down \nand reconstructed using only the normalized quaternion group. I don't know how \nto start such a quest, so it will remain a personal belief.",
+            "title": "The source of probability in quantum mechanics"
+        },
+        {
+            "location": "/about/how_done/",
+            "text": "How This Was Done\n\n\nIt all began with studying quaternions for many years...\n\n\nThen I had a daughter. How could I explain my work to her?\n\n\nThat requires blocks and straws. The blocks were in the house. The huge number \nof straws for the cube cost about $100 from Amazon. While watching \"The Big \nBang Theory\" with my wife, I sawed straws and stuck them together.\n\n\nThe photos were taking using a Nexus 5 cell phone mounted on a monopod kept in \nplace with a Black & Decker workmate.\n\n\nSoftware was written in python to merge the photos together. The project, \n\nsimply_animate_math\n, is \npublicly available on github.\n\n\nThis site was generated using \nmkdocs\n, a great program for a simple static \nsite like this one.\n\n\nThe galeries where created using fancyBox from \n\nFancyApps\n. It is free for non-commercial use such as \nthis one, but there is a reasonable licensing fee for commercial sites.  It \ntook me a few hours to figure out, and looks gorgeous.",
+            "title": "How this was done"
+        },
+        {
+            "location": "/about/how_done/#how-this-was-done",
+            "text": "It all began with studying quaternions for many years...  Then I had a daughter. How could I explain my work to her?  That requires blocks and straws. The blocks were in the house. The huge number \nof straws for the cube cost about $100 from Amazon. While watching \"The Big \nBang Theory\" with my wife, I sawed straws and stuck them together.  The photos were taking using a Nexus 5 cell phone mounted on a monopod kept in \nplace with a Black & Decker workmate.  Software was written in python to merge the photos together. The project,  simply_animate_math , is \npublicly available on github.  This site was generated using  mkdocs , a great program for a simple static \nsite like this one.  The galeries where created using fancyBox from  FancyApps . It is free for non-commercial use such as \nthis one, but there is a reasonable licensing fee for commercial sites.  It \ntook me a few hours to figure out, and looks gorgeous.",
+            "title": "How This Was Done"
+        },
+        {
+            "location": "/about/professional/",
+            "text": "Professional sketch of Doug Sweetser\n\n\nEducation\n\n\nMIT, 1980-1984 SB: Biology SB: Chemical Engineering GPA: 4.0 (I should point \nout MIT is on a 5.0, so 4.0 sounds great)\n\n\nMCD Biology - University of Colorado Boulder, 1987-1989 Ph.D. Program Left on \nown accord.\n\n\nMath Department - University of Indiana, Bloomington, 1990 Graduate level \ncourses Left on own accord.\n\n\nBrandeis, 2000-2002 MS: Computer Software Engineering\n\n\nWork Experience\n\n\nBiology\n\n\nMy first job was as a lab tech at the newly opened Whitehead Institute for \nBiomedical Research. On the first week on the job, Prof. Rick Young showed me \nhow to clone the first genes ever from the Mycobacteria that causes leprosy.\n\nThe work was featured on a NOVA documentary. Twelve technical papers were \nwritten in a three year paper in the most important journals in biology, \nincluding Nature, Cell, and the Proceedings of the National Academy of Sciences \n(PNAS).\n\n\nWorked as a lab tech for Jac Nickoloff at the Harvard School of Public Health \n(8 years). My heart was elsewhere (which caused problems on the job).\n\n\nComputers\n\n\nThe first Internet Service Provider (ISP) was started in Brookline, MA in \n1989. They were my first ISP. After leaving the biology business, I worked the \nphones in a support role. I also helped maintain the billing software written \nin Perl. The shifting landscape of ISPs lead then to downsize in 2003.\n\n\nI was the 9th employee of Black Duck Software. They initially wanted to help \ncompanies understand the licensing requirements behind open source software. I \nwas hired as a \"spider\", crawling the Internet and harvesting open source \nsoftware for our knowledgebase.\n\n\nPhysics\n\n\nInitial interest\n\n\nIn the Christmas of 1988, both my mother and sister independently bought the \nbook: \"A Brief History of Time\" by Stephen Hawking. I view that as my \"born \nagain\" moment, one based on physics, not the Bible. For a month long period, my \nmind kept rearranging information, sure that everything somehow made sense. I \nwas aware I was babbling - saying words that are part of the lexicon of \nphysics, but would not make sense to an actual physicist. I decide to keep a \nday job, but work study physics in the background.\n\n\nBoston was the perfect city in the 1990s to study physics on the side. I took a \nHarvard Extension class on Special Relativity taught by Edwin F. Taylor as he \nwas writing the book \"Spacetime Physics\" with Johnathon Wheeler. Taylor would \nbring in a new chapter from Copy Copy, and we were assigned to critique it.\n\nThus became my respectful skeptical analysis of physics. I decide to keep a day \njob, but work study physics in the background.\n\n\nI was able to show some of my earliest efforts to a famous physicist who worked \nat MIT. He said it was \"interesting, but not very interesting\". The reason was \nI did not have a theory, a means to make many calculations. At the time, all I \nhad were a few math widgets.\n\n\nFirst work on quaternions\n\n\nIn the struggle to find a theory, I held a small contest on a moderated \nnewsgroup, sci.physics.research in 1997. I asked readers to provide a brief \ndefinition of time. It had to be about math or physics, not philosophy, and \nneeded to be two sentences or less. In one math book, I recalled some odd sort \nof number that was like a scalar and a vector. The contest motivated me to \nreread that passage, then go to an old-fashion library and read up about \nquaternions. This was the first equation I saw, the squaring of a quaternion:\n\n\n\n\nTo this day, this makes me excited because the first term is at the core of \nspecial relativity as taught to me by Edwin F. Taylor. It is there, for free.\n\nThat cannot be an accident. That observation drove me to purchase the domain \nquaternions.com.\n\n\nMajor failure at a unified field theory\n\n\nI struggled to come up with a way to deal with gravity using only quaternions.\n\nOne lesson from general relativity is that a theory of gravity must be a metric \ntheory - a theory where the calculation of distance depends on where one \nhappens to be in a gravitational field. Measuring distance is a symmetric \noperation, meaning there is no handed to doing the work. Quaternions do have a \nhandedness. There is no way around that. So I reinvented hypercomplex numbers.\n\nThose have all the same multiplication rules as quaternions, but no minus signs \nanywhere. As such, hypercomplex numbers could be used to characterize a metric.\n\n\nI confess to having pride in the proposal, enough to print up t-shirts. It was \ndifficult to find a professional to review the body of work. I began blogging \non Science20.com. There I found a few technically skilled readers. When I \nfinally got to presenting what I called the GEM proposal, several readers \nobjected to the work. It took a little over a month for me to really see the \nproposal like they did. The flaw was deadly. A Lagrangian constructed from \nquaternions will not change under a rotation. It will therefore conserve \nangular momentum. A Lagrangian constructed from hypercomplex numbers will \nchange under a rotation. It will not conserve angular momentum. Kepler's law of \nequal area in equal time is a statement that gravity conserves angular \nmomentum. Thus a proposal for gravity using hypercomplex number in the \nLagrangian is wrong. End of story.\n\n\nCurrent research\n\n\nWeb sites:\n\n\n\n\n\n\nQuaternions.com\n, the mothership of my private\n  research project.\n\n\n\n\n\n\nNumbers 101\n, a visual introduction to space-time\n  numbers, aka quaternions.\n\n\n\n\n\n\nMeasurement 101\n, a site dedicated to my new proposal \nfor quaternion gravity\n\n\n\n\n\n\nVisualPhysics.org\n has a collection of analytic \n  animations generated with a user-hostile set of tools I wrote.\n\n\n\n\n\n\nQuaternion space-times-time invariance as gravity\n\n\nI went back to the equation that sparked my initial interest in quaternions:\n\n\n\n\nThe first term is called the interval. But what are the next three called? \nPhysics doesn't have a name. That is a problem because the first term is one of \nthe most important in physics because it is at the heart of special relativity.\n\nI came up with a reasonable name for the three amigos: space-times-time. I \nasked a simple question: what if space-times-time was invariant, then what sort \nof physics results? That could be gravity, but a very different theory because \nit is not a field theory. There would be no graviton, nor any quantum gravity \ntheory. The idea had enough promise that I submitted an 1500 word paper to the \n2015 Gravitation Research Foundation Essay on Gravity.  We will see if they \nlike it.",
+            "title": "Professional sketch"
+        },
+        {
+            "location": "/about/professional/#professional-sketch-of-doug-sweetser",
+            "text": "",
+            "title": "Professional sketch of Doug Sweetser"
+        },
+        {
+            "location": "/about/professional/#education",
+            "text": "MIT, 1980-1984 SB: Biology SB: Chemical Engineering GPA: 4.0 (I should point \nout MIT is on a 5.0, so 4.0 sounds great)  MCD Biology - University of Colorado Boulder, 1987-1989 Ph.D. Program Left on \nown accord.  Math Department - University of Indiana, Bloomington, 1990 Graduate level \ncourses Left on own accord.  Brandeis, 2000-2002 MS: Computer Software Engineering",
+            "title": "Education"
+        },
+        {
+            "location": "/about/professional/#work-experience",
+            "text": "",
+            "title": "Work Experience"
+        },
+        {
+            "location": "/about/professional/#biology",
+            "text": "My first job was as a lab tech at the newly opened Whitehead Institute for \nBiomedical Research. On the first week on the job, Prof. Rick Young showed me \nhow to clone the first genes ever from the Mycobacteria that causes leprosy. \nThe work was featured on a NOVA documentary. Twelve technical papers were \nwritten in a three year paper in the most important journals in biology, \nincluding Nature, Cell, and the Proceedings of the National Academy of Sciences \n(PNAS).  Worked as a lab tech for Jac Nickoloff at the Harvard School of Public Health \n(8 years). My heart was elsewhere (which caused problems on the job).",
+            "title": "Biology"
+        },
+        {
+            "location": "/about/professional/#computers",
+            "text": "The first Internet Service Provider (ISP) was started in Brookline, MA in \n1989. They were my first ISP. After leaving the biology business, I worked the \nphones in a support role. I also helped maintain the billing software written \nin Perl. The shifting landscape of ISPs lead then to downsize in 2003.  I was the 9th employee of Black Duck Software. They initially wanted to help \ncompanies understand the licensing requirements behind open source software. I \nwas hired as a \"spider\", crawling the Internet and harvesting open source \nsoftware for our knowledgebase.",
+            "title": "Computers"
+        },
+        {
+            "location": "/about/professional/#physics",
+            "text": "",
+            "title": "Physics"
+        },
+        {
+            "location": "/about/professional/#initial-interest",
+            "text": "In the Christmas of 1988, both my mother and sister independently bought the \nbook: \"A Brief History of Time\" by Stephen Hawking. I view that as my \"born \nagain\" moment, one based on physics, not the Bible. For a month long period, my \nmind kept rearranging information, sure that everything somehow made sense. I \nwas aware I was babbling - saying words that are part of the lexicon of \nphysics, but would not make sense to an actual physicist. I decide to keep a \nday job, but work study physics in the background.  Boston was the perfect city in the 1990s to study physics on the side. I took a \nHarvard Extension class on Special Relativity taught by Edwin F. Taylor as he \nwas writing the book \"Spacetime Physics\" with Johnathon Wheeler. Taylor would \nbring in a new chapter from Copy Copy, and we were assigned to critique it. \nThus became my respectful skeptical analysis of physics. I decide to keep a day \njob, but work study physics in the background.  I was able to show some of my earliest efforts to a famous physicist who worked \nat MIT. He said it was \"interesting, but not very interesting\". The reason was \nI did not have a theory, a means to make many calculations. At the time, all I \nhad were a few math widgets.",
+            "title": "Initial interest"
+        },
+        {
+            "location": "/about/professional/#first-work-on-quaternions",
+            "text": "In the struggle to find a theory, I held a small contest on a moderated \nnewsgroup, sci.physics.research in 1997. I asked readers to provide a brief \ndefinition of time. It had to be about math or physics, not philosophy, and \nneeded to be two sentences or less. In one math book, I recalled some odd sort \nof number that was like a scalar and a vector. The contest motivated me to \nreread that passage, then go to an old-fashion library and read up about \nquaternions. This was the first equation I saw, the squaring of a quaternion:   To this day, this makes me excited because the first term is at the core of \nspecial relativity as taught to me by Edwin F. Taylor. It is there, for free. \nThat cannot be an accident. That observation drove me to purchase the domain \nquaternions.com.",
+            "title": "First work on quaternions"
+        },
+        {
+            "location": "/about/professional/#major-failure-at-a-unified-field-theory",
+            "text": "I struggled to come up with a way to deal with gravity using only quaternions. \nOne lesson from general relativity is that a theory of gravity must be a metric \ntheory - a theory where the calculation of distance depends on where one \nhappens to be in a gravitational field. Measuring distance is a symmetric \noperation, meaning there is no handed to doing the work. Quaternions do have a \nhandedness. There is no way around that. So I reinvented hypercomplex numbers. \nThose have all the same multiplication rules as quaternions, but no minus signs \nanywhere. As such, hypercomplex numbers could be used to characterize a metric.  I confess to having pride in the proposal, enough to print up t-shirts. It was \ndifficult to find a professional to review the body of work. I began blogging \non Science20.com. There I found a few technically skilled readers. When I \nfinally got to presenting what I called the GEM proposal, several readers \nobjected to the work. It took a little over a month for me to really see the \nproposal like they did. The flaw was deadly. A Lagrangian constructed from \nquaternions will not change under a rotation. It will therefore conserve \nangular momentum. A Lagrangian constructed from hypercomplex numbers will \nchange under a rotation. It will not conserve angular momentum. Kepler's law of \nequal area in equal time is a statement that gravity conserves angular \nmomentum. Thus a proposal for gravity using hypercomplex number in the \nLagrangian is wrong. End of story.",
+            "title": "Major failure at a unified field theory"
+        },
+        {
+            "location": "/about/professional/#current-research",
+            "text": "Web sites:    Quaternions.com , the mothership of my private\n  research project.    Numbers 101 , a visual introduction to space-time\n  numbers, aka quaternions.    Measurement 101 , a site dedicated to my new proposal \nfor quaternion gravity    VisualPhysics.org  has a collection of analytic \n  animations generated with a user-hostile set of tools I wrote.",
+            "title": "Current research"
+        },
+        {
+            "location": "/about/professional/#quaternion-space-times-time-invariance-as-gravity",
+            "text": "I went back to the equation that sparked my initial interest in quaternions:   The first term is called the interval. But what are the next three called? \nPhysics doesn't have a name. That is a problem because the first term is one of \nthe most important in physics because it is at the heart of special relativity. \nI came up with a reasonable name for the three amigos: space-times-time. I \nasked a simple question: what if space-times-time was invariant, then what sort \nof physics results? That could be gravity, but a very different theory because \nit is not a field theory. There would be no graviton, nor any quantum gravity \ntheory. The idea had enough promise that I submitted an 1500 word paper to the \n2015 Gravitation Research Foundation Essay on Gravity.  We will see if they \nlike it.",
+            "title": "Quaternion space-times-time invariance as gravity"
+        },
+        {
+            "location": "/about/personal/",
+            "text": "Personal Sketch of Doug Sweetser\n\n\nMy father went to Harvard University and Harvard Law School as his father did. He read voraciously. My mother went to Boston University getting a degree in Physical Therapy. They had one poor date in a canoe. While in Europe, my father tracked down my mother, and with nearly all the details lost to me, wooed her accross the pond.\n\n\nI was born in Bronxville, New York, in 1962. We had both a stay at home mom and live in maid. My father worked at the New York Times a corporate lawyer. When I was five, he got a job at the Minneapolis Star and Tribune. The family moved into a house with almost 10 acres of land. I went to a The Blake School an all boys private school, until it became the plural Blake Schools and coed in seventh grade (great timing). My education continued at M.I.T. where I got degrees in Biology and Chemical engineering. Note: I did not get a degree in either mathematics or physics.\n\n\nI am a solid core nerd. A hard core nerd has strong opinions about all the versions of Star Trek. A solid core nerd does not watch the show because the science is so impossibly wrong. In Star Trek, space is treated like Manhattan: go to the next stop, and a wonderfully different collection of people are there. One can easy go from Wall Street Suits, to Chinatown, to Uptown, to Harlem, Spanish or otherwise. Space in the Universe is really just space, with distances too far for people to travel.",
+            "title": "Personal sketch"
+        },
+        {
+            "location": "/about/personal/#personal-sketch-of-doug-sweetser",
+            "text": "My father went to Harvard University and Harvard Law School as his father did. He read voraciously. My mother went to Boston University getting a degree in Physical Therapy. They had one poor date in a canoe. While in Europe, my father tracked down my mother, and with nearly all the details lost to me, wooed her accross the pond.  I was born in Bronxville, New York, in 1962. We had both a stay at home mom and live in maid. My father worked at the New York Times a corporate lawyer. When I was five, he got a job at the Minneapolis Star and Tribune. The family moved into a house with almost 10 acres of land. I went to a The Blake School an all boys private school, until it became the plural Blake Schools and coed in seventh grade (great timing). My education continued at M.I.T. where I got degrees in Biology and Chemical engineering. Note: I did not get a degree in either mathematics or physics.  I am a solid core nerd. A hard core nerd has strong opinions about all the versions of Star Trek. A solid core nerd does not watch the show because the science is so impossibly wrong. In Star Trek, space is treated like Manhattan: go to the next stop, and a wonderfully different collection of people are there. One can easy go from Wall Street Suits, to Chinatown, to Uptown, to Harlem, Spanish or otherwise. Space in the Universe is really just space, with distances too far for people to travel.",
+            "title": "Personal Sketch of Doug Sweetser"
+        },
+        {
+            "location": "/about/contact/",
+            "text": "Contact Info\n\n\nDoug Sweetser\nsweetser@alum.mit.edu\n\n\nIf it is really important to you, a google hangout can be arranged.",
+            "title": "Contact"
+        },
+        {
+            "location": "/about/contact/#contact-info",
+            "text": "Doug Sweetser\nsweetser@alum.mit.edu  If it is really important to you, a google hangout can be arranged.",
+            "title": "Contact Info"
+        },
+        {
+            "location": "/about/tip_jar/",
+            "text": "Tip Jar\n\n\nThis is a part-time job for me that eats real money.\n\n\nCash.me/$VisualPhysics",
+            "title": "Tip jar"
+        },
+        {
+            "location": "/about/tip_jar/#tip-jar",
+            "text": "This is a part-time job for me that eats real money.  Cash.me/$VisualPhysics",
+            "title": "Tip Jar"
+        }
+    ]
+}
