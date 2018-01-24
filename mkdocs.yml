@@ -2,28 +2,32 @@ site_name: Numbers 101
 site_author: sweetser@alum.mit.edu
 copyright: 2015, Doug Sweetser, all rights reserved.
 pages:
-- [index.md, Static numbers, Static Numbers]
-- [static/plane_intro.md, Static numbers, Static numbers in a plane]
-- [static/horizontal.md, Static numbers, Add horizontally]
-- [static/vertical.md, Static numbers, Add vertically]
-- [static/diagonal.md, Static numbers, Add diagonally]
-- [static/plane_summary.md, Static numbers, Complex numbers as the plane]
-- [animated/animated.md, Animated numbers, Animated numbers]
-- [animated/time.md, Animated numbers, Move only in time]
-- [animated/space.md, Animated numbers, Big only briefly]
-- [animated/motion.md, Animated numbers, Constant motion]
-- [animated/complex_animation.md, Animated numbers, Complex numbers as animations]
-- [space-time/space-time.md, Space-time numbers, Space-time numbers]
-- [space-time/time.md, Space-time numbers, Move only in time]
-- [space-time/space.md, Space-time numbers, Big only briefly]
-- [space-time/motion.md, Space-time numbers, Constant motion]
-- [space-time/space_time_animations.md, Space-time numbers, Space-time numbers as animations]
-- [qft.md, Super collider numbers]
-- [about/summary.md, About, Summary]
-- [about/technical_summary.md, About, Technical summary]
-- [about/how_done.md, About, How this was done]
-- [about/professional.md, About, Professional sketch]
-- [about/personal.md, About, Personal sketch]
-- [about/contact.md, About, Contact]
-- [about/tip_jar.md, About, Tip jar]
+- '': index.md
+- Static N:
+    - 'Static numbers in a plane': 'static/plane_intro.md'
+    - 'Add horizontally': 'static/horizontal.md'
+    - 'Add vertically': 'static/vertical.md' 
+    - 'Add diagonally': 'static/diagonal.md'
+    - 'Complex numbers as the plane': 'static/plane_summary.md' 
+- Animated N:
+    - 'Animated numbers': 'animated/animated.md' 
+    - 'Move only in time': 'animated/time.md'
+    - 'Big only briefly': 'animated/space.md'
+    - 'Constant motion': 'animated/motion.md' 
+    - 'Complex numbers as animations': 'animated/complex_animation.md' 
+- Space-time N:
+    - 'Space-time numbers': 'space-time/space-time.md'
+    - 'Move only in time': 'space-time/time.md' 
+    - 'Big only briefly': 'space-time/space.md' 
+    - 'Constant motion': 'space-time/motion.md' 
+    - 'Space-time numbers as animations': 'space-time/space_time_animations.md' 
+- Super Collider N: 'qft.md'
+- About:
+    - 'Summary': 'about/summary.md' 
+    - 'Technical summary': 'about/technical_summary.md' 
+    - 'How this was done': 'about/how_done.md' 
+    - 'Professional sketch': 'about/professional.md' 
+    - 'Personal sketch': 'about/personal.md' 
+    - 'Contact': 'about/contact.md' 
+    - 'Tip jar': 'about/tip_jar.md' 
 theme_dir: spacelab-mod
