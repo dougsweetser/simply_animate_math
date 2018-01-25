@@ -3,25 +3,25 @@ site_author: sweetser@alum.mit.edu
 copyright: 2015, Doug Sweetser, all rights reserved.
 pages:
 - '': index.md
-- Static N:
+- Static Numbers:
     - 'Static numbers in a plane': 'static/plane_intro.md'
     - 'Add horizontally': 'static/horizontal.md'
     - 'Add vertically': 'static/vertical.md' 
     - 'Add diagonally': 'static/diagonal.md'
     - 'Complex numbers as the plane': 'static/plane_summary.md' 
-- Animated N:
+- Animated Numbers:
     - 'Animated numbers': 'animated/animated.md' 
     - 'Move only in time': 'animated/time.md'
     - 'Big only briefly': 'animated/space.md'
     - 'Constant motion': 'animated/motion.md' 
     - 'Complex numbers as animations': 'animated/complex_animation.md' 
-- Space-time N:
+- Space-time Numbers:
     - 'Space-time numbers': 'space-time/space-time.md'
     - 'Move only in time': 'space-time/time.md' 
     - 'Big only briefly': 'space-time/space.md' 
     - 'Constant motion': 'space-time/motion.md' 
     - 'Space-time numbers as animations': 'space-time/space_time_animations.md' 
-- Super Collider N: 'qft.md'
+- Super Collider Numbers: 'qft.md'
 - About:
     - 'Summary': 'about/summary.md' 
     - 'Technical summary': 'about/technical_summary.md' 
